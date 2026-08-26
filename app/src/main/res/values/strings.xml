@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">平台硬件工具</string>
+    <string name="media_title">媒体播放</string>
+    <string name="sensor_title">传感器监测</string>
+    <string name="root_log_title">Root 日志查看器</string>
+    <string name="fps_title">屏幕实时 FPS</string>
+    <string name="log_buffer">缓冲区</string>
+    <string name="log_level">最低等级</string>
+    <string name="log_keyword_hint">关键字过滤（不区分大小写）</string>
+    <string name="log_pause">暂停</string>
+    <string name="log_resume">继续</string>
+    <string name="log_clear">清空窗口</string>
+    <string name="log_export">导出</string>
+    <string name="log_auto_scroll">自动滚动</string>
+</resources>

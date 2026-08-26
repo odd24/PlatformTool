@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_root_log.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_root_log.xml"
+    },
+    {
+        "merged": "com.example.platformtool.app-debug-23:/layout_activity_battery_info.xml.flat",
+        "source": "com.example.platformtool.app-main-25:/layout/activity_battery_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_fps_test.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_fps_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_battery_chart.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_battery_chart.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\drawable_value_background.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\drawable\\value_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_video_library.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_video_library.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_quick_tools.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_quick_tools.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_sensor.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_sensor.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_battery_info.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_battery_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_audio_player.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_audio_player.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\drawable\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_serial_port.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_serial_port.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\drawable_card_background.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\drawable\\card_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-debug-23:\\layout_activity_fullscreen_video.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.platformtool.app-main-25:\\layout\\activity_fullscreen_video.xml"
+    }
+]

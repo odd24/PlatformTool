@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/surface" android:orientation="vertical" android:padding="14dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/card_background" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="检测到的设备：" android:textColor="@color/text_primary" />
+            <Spinner android:id="@+id/serialDeviceSpinner" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" />
+            <Button android:id="@+id/refreshSerialDevicesButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="刷新" />
+        </LinearLayout>
+        <EditText android:id="@+id/serialPathInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="手动输入设备路径，例如 /dev/ttyS5" android:inputType="textNoSuggestions" android:singleLine="true" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="波特率：" android:textColor="@color/text_primary" />
+            <Spinner android:id="@+id/baudRateSpinner" android:layout_width="wrap_content" android:layout_height="48dp" />
+            <EditText android:id="@+id/customBaudRateInput" android:layout_width="160dp" android:layout_height="wrap_content"
+                android:hint="输入自定义波特率" android:inputType="number" android:maxLength="8"
+                android:singleLine="true" android:visibility="gone" />
+            <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="串口设备" android:textColor="@color/text_primary" android:textStyle="bold" />
+            <Switch android:id="@+id/serialPortSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:checked="false" android:showText="true" android:textOff="关闭" android:textOn="开启" />
+        </LinearLayout>
+        <TextView android:id="@+id/serialStatusText" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="串口已关闭" android:textColor="@color/text_secondary" android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接收显示：" android:textColor="@color/text_primary" />
+        <Spinner android:id="@+id/receiveModeSpinner" android:layout_width="wrap_content" android:layout_height="48dp" />
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <Button android:id="@+id/exportSerialLogButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="导出记录" />
+        <Button android:id="@+id/clearSerialLogButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清空接收区" />
+    </LinearLayout>
+
+    <ScrollView android:id="@+id/serialReceiveScroll" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:background="@drawable/value_background" android:fillViewport="true">
+        <TextView android:id="@+id/serialReceiveText" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:fontFamily="monospace" android:padding="10dp" android:text="等待接收数据…\n"
+            android:textColor="@color/text_primary" android:textIsSelectable="true" android:textSize="14sp" />
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" android:background="@drawable/card_background" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发送格式：" android:textColor="@color/text_primary" />
+            <Spinner android:id="@+id/sendModeSpinner" android:layout_width="wrap_content" android:layout_height="48dp" />
+        </LinearLayout>
+        <EditText android:id="@+id/serialSendInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="top|start" android:hint="输入要发送的文本；HEX 示例：01 03 FF 0A"
+            android:inputType="textMultiLine|textNoSuggestions" android:maxLines="4" android:minLines="2" />
+        <Button android:id="@+id/sendSerialButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="end" android:enabled="false" android:text="发送" />
+    </LinearLayout>
+</LinearLayout>

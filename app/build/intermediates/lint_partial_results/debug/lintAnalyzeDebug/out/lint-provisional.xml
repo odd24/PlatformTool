@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.1" type="conditional_incidents">
+
+    <incident
+        id="NotificationPermission"
+        severity="error"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission">
+        <fix-data missing="android.permission.POST_NOTIFICATIONS"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryLoggingService.java"
+            line="254"
+            column="9"
+            startOffset="10678"
+            endLine="254"
+            endColumn="80"
+            endOffset="10749"/>
+    </incident>
+
+    <incident
+        id="NotificationPermission"
+        severity="error"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission">
+        <fix-data missing="android.permission.POST_NOTIFICATIONS"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryLoggingService.java"
+            line="303"
+            column="9"
+            startOffset="13108"
+            endLine="303"
+            endColumn="77"
+            endOffset="13176"/>
+    </incident>
+
+</incidents>

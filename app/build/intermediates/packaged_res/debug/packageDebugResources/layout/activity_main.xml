@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/surface" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="设备功能快速检测" android:textColor="@color/text_primary"
+            android:textSize="26sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:layout_marginBottom="24dp"
+            android:text="兼容 MTK、Rockchip 与 Unisoc 标准 Android 设备"
+            android:textColor="@color/text_secondary" android:textSize="15sp" />
+
+        <LinearLayout android:id="@+id/audioCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="音乐播放器" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="播放列表、目录扫描、进度控制与循环播放" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openAudioButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开音乐" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/videoCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="视频播放器" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="视频文件库，点击条目直接进入横屏全屏播放" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openVideoButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开视频" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/sensorCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="传感器实时监测" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="加速度、陀螺仪、地磁、光感与距离传感器" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openSensorButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="查看传感器" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/serialCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="串口收发工具" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="手动选择串口设备，支持普通文本与 HEX 收发" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openSerialButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开串口工具" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/logCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Root 日志查看器" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="实时查看、过滤并导出 Logcat 与 Kernel 日志" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openLogButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开日志" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/fpsCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="屏幕实时 FPS" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="对比静态与动态画面下的实时帧率和刷新率" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openFpsButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开 FPS 测试" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/quickToolsCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="快捷开关工具" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="触摸显示、坐标、手电筒、震动与屏幕常亮开关" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openQuickToolsButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开快捷工具" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/batteryCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="充电与电池信息" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="实时查看电量、电流、电压和温度，并记录电池曲线 CSV" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openBatteryButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开电池信息" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

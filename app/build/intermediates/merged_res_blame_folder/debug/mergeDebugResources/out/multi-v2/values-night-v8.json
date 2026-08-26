@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.platformtool.app-mergeDebugResources-21:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-4\\b434b6db236d7fd556b4419dfd48df8a\\transformed\\appcompat-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,24",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,1559",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,1643"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\PlatformTool\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,511",
+                        "endLines": "9,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "505,923"
+                    },
+                    "to": {
+                        "startLines": "9,17",
+                        "startColumns": "4,4",
+                        "startOffsets": "687,1142",
+                        "endLines": "16,23",
+                        "endColumns": "12,12",
+                        "endOffsets": "1137,1554"
+                    }
+                }
+            ]
+        }
+    ]
+}

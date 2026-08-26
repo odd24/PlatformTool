@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_700">#175CD3</color>
+    <color name="blue_800">#1849A9</color>
+    <color name="blue_050">#EFF8FF</color>
+    <color name="green_700">#027A48</color>
+    <color name="surface">#F8FAFC</color>
+    <color name="card">#FFFFFF</color>
+    <color name="text_primary">#101828</color>
+    <color name="text_secondary">#475467</color>
+    <color name="divider">#EAECF0</color>
+    <color name="log_background">#101828</color>
+    <color name="log_text">#EAECF0</color>
+    <color name="status_ok">#027A48</color>
+    <color name="status_error">#B42318</color>
+</resources>

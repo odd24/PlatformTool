@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.1" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.platformtool.BatteryLoggingBootReceiver"
+                    boolean="true"/>
+                <entry
+                    name="com.example.platformtool.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="NotificationPermission">
+        <entry
+            name="source"
+            boolean="true"/>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="color[card(U),divider(U),blue_050(U),surface(U),text_secondary(U),text_primary(U),green_700(U),blue_700(U),log_background(U),blue_800(U),log_text(U),status_ok(U),status_error(U)],drawable[ic_launcher(U),card_background(U),value_background(U)],id[addAudioButton(U),scanAudioButton(U),audioCountText(U),audioListView(U),audioNowPlayingText(U),audioBottomSeekBar(U),audioBottomTimeText(U),audioPreviousButton(U),audioPlayPauseButton(U),audioNextButton(U),audioBottomLoopSpinner(U),batteryChartStatus(U),batteryChartView(U),batteryChargeState(U),batteryLevelValue(U),batteryLevelProgress(U),batteryCurrentValue(U),batteryVoltageValue(U),batteryTemperatureValue(U),batteryPowerSource(U),batteryRecordSwitch(U),batteryRecordStatus(U),batteryChartButton(U),batteryLastRecord(U),batteryTableStatus(U),batteryRecordTableHeader(D),batteryRecordTable(U),fpsValue(U),fpsDisplayInfo(U),fpsSceneSelector(U),fpsStaticScene(D),fpsDynamicScene(U),fpsSceneHint(U),fpsMeasureButton(U),fpsSceneView(U),fullscreenRoot(D),fullscreenVideoView(U),fullscreenVideoTitle(U),exitFullscreenButton(U),videoControlsPanel(D),fullscreenVideoSeekBar(U),fullscreenVideoTimeText(U),videoPreviousButton(U),videoPlayPauseButton(U),videoNextButton(U),fullscreenLoopSpinner(U),audioCard(U),openAudioButton(U),videoCard(U),openVideoButton(U),sensorCard(U),openSensorButton(U),serialCard(U),openSerialButton(U),logCard(U),openLogButton(U),fpsCard(U),openFpsButton(U),quickToolsCard(U),openQuickToolsButton(U),batteryCard(U),openBatteryButton(U),quickToolsStatus(U),showTouchesSwitch(U),flashlightSwitch(U),vibrationSwitch(U),keepScreenOnSwitch(U),logStatusText(U),logBufferSpinner(U),logLevelSpinner(U),logKeywordEdit(U),logPauseButton(U),logClearButton(U),logExportButton(U),logAutoScrollCheck(U),logList(U),sensorStatusText(U),accelerometerSwitch(U),accelerometerValue(U),gravityBallView(U),accelerometerInfo(U),gyroscopeSwitch(U),gyroscopeValue(U),gyroscopeInfo(U),magneticSwitch(U),magneticValue(U),magneticInfo(U),lightSwitch(U),lightValue(U),lightInfo(U),proximitySwitch(U),proximityValue(U),proximityInfo(U),serialDeviceSpinner(U),refreshSerialDevicesButton(U),serialPathInput(U),baudRateSpinner(U),customBaudRateInput(U),serialPortSwitch(U),serialStatusText(U),receiveModeSpinner(U),exportSerialLogButton(U),clearSerialLogButton(U),serialReceiveScroll(U),serialReceiveText(U),sendModeSpinner(U),serialSendInput(U),sendSerialButton(U),addVideoButton(U),scanVideoButton(U),videoCountText(U),videoLibraryListView(U)],layout[activity_audio_player(U),activity_battery_chart(U),activity_battery_info(U),activity_fps_test(U),activity_fullscreen_video(U),activity_main(U),activity_quick_tools(U),activity_root_log(U),activity_sensor(U),activity_serial_port(U),activity_video_library(U)],string[app_name(U),log_buffer(U),log_level(U),log_keyword_hint(U),log_pause(U),log_clear(U),log_export(U),log_auto_scroll(U),media_title(D),sensor_title(U),root_log_title(U),fps_title(U),log_resume(U)],style[Theme_PlatformTool(U),Theme_PlatformTool_Fullscreen(U),Theme_AppCompat_Light_DarkActionBar(R),Theme_AppCompat_Light_NoActionBar(R)];e^0^1,f^2,80^3^0^4^1^2^5,81^3^4,82^3^f^6^7^e^5^4,83^3^f^6^4,85^3^5^4^e,86^3^5^4^e,87^3^f^8c^8d^8e^8f^90^91^92^8,88^3^f^5^e^4,89^3^e^5^4^f,8a^3^0^4^1^2,98^9a^7^9^6^0,99^9b^6;;;"/>
+        <location id="R.string.media_title"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="4"
+            column="13"
+            startOffset="107"
+            endLine="4"
+            endColumn="31"
+            endOffset="125"/>
+    </map>
+
+</incidents>

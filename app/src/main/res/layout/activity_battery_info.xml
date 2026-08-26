@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/batteryChargeState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/value_background"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="正在读取电池状态…"
+            android:textColor="@color/green_700"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/batteryLevelValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="--%"
+            android:textColor="@color/blue_700"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/batteryLevelProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="6dp"
+            android:max="100"
+            android:progress="0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/card_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/batteryCurrentValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="实时电流：-- mA"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/batteryVoltageValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="电池电压：-- V"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/batteryTemperatureValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="电池温度：-- ℃"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/batteryPowerSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="供电来源：--"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/card_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记录电池曲线"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="电量变化或充电器插拔时写入 CSV"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/batteryRecordSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showText="true"
+                android:textOff="关闭"
+                android:textOn="记录中" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/batteryRecordStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="记录已关闭。打开开关后请选择 CSV 保存位置。"
+            android:textColor="@color/text_secondary"
+            android:textIsSelectable="true"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/batteryChartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="绘制最近 CSV 折线图" />
+
+        <TextView
+            android:id="@+id/batteryLastRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/value_background"
+            android:fontFamily="monospace"
+            android:minHeight="72dp"
+            android:padding="10dp"
+            android:text="暂无记录"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="最近记录表格"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/batteryTableStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="暂无可显示的 CSV 记录"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="494dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/value_background"
+            android:fillViewport="false"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.example.platformtool.BatteryRecordTableView
+                    android:id="@+id/batteryRecordTableHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="电池记录表头" />
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="456dp"
+                    android:fillViewport="false"
+                    android:nestedScrollingEnabled="true"
+                    android:scrollbars="vertical">
+
+                    <com.example.platformtool.BatteryRecordTableView
+                        android:id="@+id/batteryRecordTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="最近电池记录表格" />
+                </ScrollView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,2361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.1" type="incidents">
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="34"
+            column="13"
+            startOffset="1535"
+            endLine="34"
+            endColumn="52"
+            endOffset="1574"/>
+    </incident>
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="38"
+            column="13"
+            startOffset="1734"
+            endLine="38"
+            endColumn="56"
+            endOffset="1777"/>
+    </incident>
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="48"
+            column="13"
+            startOffset="2230"
+            endLine="48"
+            endColumn="52"
+            endOffset="2269"/>
+    </incident>
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="55"
+            column="13"
+            startOffset="2551"
+            endLine="55"
+            endColumn="56"
+            endOffset="2594"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;添加音乐&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="9"
+            column="123"
+            startOffset="655"
+            endLine="9"
+            endColumn="142"
+            endOffset="674"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;扫描目录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="10"
+            column="124"
+            startOffset="801"
+            endLine="10"
+            endColumn="143"
+            endOffset="820"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0 首音乐&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="12"
+            column="61"
+            startOffset="999"
+            endLine="12"
+            endColumn="81"
+            endOffset="1019"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;请选择音乐&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="23"
+            column="67"
+            startOffset="1889"
+            endLine="23"
+            endColumn="87"
+            endOffset="1909"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;00:00 / 00:00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="27"
+            column="35"
+            startOffset="2331"
+            endLine="27"
+            endColumn="63"
+            endOffset="2359"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;上一首&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="29"
+            column="156"
+            startOffset="2738"
+            endLine="29"
+            endColumn="174"
+            endOffset="2756"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;播放&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="30"
+            column="157"
+            startOffset="2916"
+            endLine="30"
+            endColumn="174"
+            endOffset="2933"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;下一首&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="31"
+            column="152"
+            startOffset="3088"
+            endLine="31"
+            endColumn="170"
+            endOffset="3106"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;正在读取最近的电池 CSV…&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_chart.xml"
+            line="14"
+            column="9"
+            startOffset="486"
+            endLine="14"
+            endColumn="38"
+            endOffset="515"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;电量、电流、电压和温度折线图&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_chart.xml"
+            line="24"
+            column="9"
+            startOffset="853"
+            endLine="24"
+            endColumn="52"
+            endOffset="896"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;正在读取电池状态…&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="21"
+            column="13"
+            startOffset="752"
+            endLine="21"
+            endColumn="37"
+            endOffset="776"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;--%&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="32"
+            column="13"
+            startOffset="1159"
+            endLine="32"
+            endColumn="31"
+            endOffset="1177"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;实时电流：-- mA&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="57"
+            column="17"
+            startOffset="2099"
+            endLine="57"
+            endColumn="42"
+            endOffset="2124"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;电池电压：-- V&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="66"
+            column="17"
+            startOffset="2470"
+            endLine="66"
+            endColumn="41"
+            endOffset="2494"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;电池温度：-- ℃&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="75"
+            column="17"
+            startOffset="2844"
+            endLine="75"
+            endColumn="41"
+            endOffset="2868"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;供电来源：--&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="84"
+            column="17"
+            startOffset="3213"
+            endLine="84"
+            endColumn="39"
+            endOffset="3235"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;记录电池曲线&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="106"
+            column="21"
+            startOffset="4049"
+            endLine="106"
+            endColumn="42"
+            endOffset="4070"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;电量变化或充电器插拔时写入 CSV&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="115"
+            column="21"
+            startOffset="4434"
+            endLine="115"
+            endColumn="53"
+            endOffset="4466"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="125"
+            column="17"
+            startOffset="4872"
+            endLine="125"
+            endColumn="37"
+            endOffset="4892"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;记录中&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="126"
+            column="17"
+            startOffset="4909"
+            endLine="126"
+            endColumn="37"
+            endOffset="4929"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;记录已关闭。打开开关后请选择 CSV 保存位置。&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="134"
+            column="13"
+            startOffset="5179"
+            endLine="134"
+            endColumn="52"
+            endOffset="5218"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;绘制最近 CSV 折线图&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="145"
+            column="13"
+            startOffset="5630"
+            endLine="145"
+            endColumn="40"
+            endOffset="5657"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;暂无记录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="156"
+            column="13"
+            startOffset="6056"
+            endLine="156"
+            endColumn="32"
+            endOffset="6075"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;最近记录表格&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="164"
+            column="13"
+            startOffset="6339"
+            endLine="164"
+            endColumn="34"
+            endOffset="6360"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;暂无可显示的 CSV 记录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="174"
+            column="13"
+            startOffset="6709"
+            endLine="174"
+            endColumn="41"
+            endOffset="6737"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;电池记录表头&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="195"
+            column="21"
+            startOffset="7583"
+            endLine="195"
+            endColumn="56"
+            endOffset="7618"/>
+    </incident>
+
+    <incident
+        id="NestedScrolling"
+        severity="warning"
+        message="The vertically scrolling `ScrollView` should not contain another vertically scrolling widget (`ScrollView`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="197"
+            column="18"
+            startOffset="7640"
+            endLine="197"
+            endColumn="28"
+            endOffset="7650"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;最近电池记录表格&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="208"
+            column="25"
+            startOffset="8191"
+            endLine="208"
+            endColumn="62"
+            endOffset="8228"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;请选择画面后点击开始测量&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fps_test.xml"
+            line="16"
+            column="9"
+            startOffset="563"
+            endLine="16"
+            endColumn="36"
+            endOffset="590"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;静态画面&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fps_test.xml"
+            line="43"
+            column="13"
+            startOffset="1481"
+            endLine="43"
+            endColumn="32"
+            endOffset="1500"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;动态画面&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fps_test.xml"
+            line="50"
+            column="13"
+            startOffset="1727"
+            endLine="50"
+            endColumn="32"
+            endOffset="1746"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;点击后静置1秒，再在界面完全不变的状态下测量3秒。&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fps_test.xml"
+            line="58"
+            column="9"
+            startOffset="1952"
+            endLine="58"
+            endColumn="49"
+            endOffset="1992"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;开始测量（静置1秒 + 测量3秒）&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fps_test.xml"
+            line="68"
+            column="9"
+            startOffset="2321"
+            endLine="68"
+            endColumn="41"
+            endOffset="2353"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;FPS 测试画面&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fps_test.xml"
+            line="76"
+            column="9"
+            startOffset="2601"
+            endLine="76"
+            endColumn="46"
+            endOffset="2638"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;退出&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fullscreen_video.xml"
+            line="14"
+            column="129"
+            startOffset="1119"
+            endLine="14"
+            endColumn="146"
+            endOffset="1136"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;00:00 / 00:00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fullscreen_video.xml"
+            line="22"
+            column="35"
+            startOffset="1788"
+            endLine="22"
+            endColumn="63"
+            endOffset="1816"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;上一个&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fullscreen_video.xml"
+            line="24"
+            column="132"
+            startOffset="2133"
+            endLine="24"
+            endColumn="150"
+            endOffset="2151"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;暂停&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fullscreen_video.xml"
+            line="25"
+            column="133"
+            startOffset="2287"
+            endLine="25"
+            endColumn="150"
+            endOffset="2304"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;下一个&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fullscreen_video.xml"
+            line="26"
+            column="128"
+            startOffset="2435"
+            endLine="26"
+            endColumn="146"
+            endOffset="2453"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;设备功能快速检测&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="8"
+            column="13"
+            startOffset="513"
+            endLine="8"
+            endColumn="36"
+            endOffset="536"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;兼容 MTK、Rockchip 与 Unisoc 标准 Android 设备&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="12"
+            column="13"
+            startOffset="822"
+            endLine="12"
+            endColumn="66"
+            endOffset="875"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;音乐播放器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="19"
+            column="17"
+            startOffset="1369"
+            endLine="19"
+            endColumn="37"
+            endOffset="1389"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;播放列表、目录扫描、进度控制与循环播放&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="21"
+            column="17"
+            startOffset="1624"
+            endLine="21"
+            endColumn="51"
+            endOffset="1658"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;打开音乐&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="23"
+            column="77"
+            startOffset="1931"
+            endLine="23"
+            endColumn="96"
+            endOffset="1950"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;视频播放器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="30"
+            column="17"
+            startOffset="2422"
+            endLine="30"
+            endColumn="37"
+            endOffset="2442"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;视频文件库，点击条目直接进入横屏全屏播放&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="32"
+            column="17"
+            startOffset="2677"
+            endLine="32"
+            endColumn="52"
+            endOffset="2712"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;打开视频&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="34"
+            column="77"
+            startOffset="2985"
+            endLine="34"
+            endColumn="96"
+            endOffset="3004"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;传感器实时监测&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="41"
+            column="17"
+            startOffset="3477"
+            endLine="41"
+            endColumn="39"
+            endOffset="3499"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;加速度、陀螺仪、地磁、光感与距离传感器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="43"
+            column="17"
+            startOffset="3734"
+            endLine="43"
+            endColumn="51"
+            endOffset="3768"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;查看传感器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="45"
+            column="77"
+            startOffset="4042"
+            endLine="45"
+            endColumn="97"
+            endOffset="4062"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;串口收发工具&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="52"
+            column="17"
+            startOffset="4535"
+            endLine="52"
+            endColumn="38"
+            endOffset="4556"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;手动选择串口设备，支持普通文本与 HEX 收发&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="54"
+            column="17"
+            startOffset="4791"
+            endLine="54"
+            endColumn="55"
+            endOffset="4829"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;打开串口工具&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="56"
+            column="77"
+            startOffset="5103"
+            endLine="56"
+            endColumn="98"
+            endOffset="5124"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Root 日志查看器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="63"
+            column="17"
+            startOffset="5594"
+            endLine="63"
+            endColumn="42"
+            endOffset="5619"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;实时查看、过滤并导出 Logcat 与 Kernel 日志&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="65"
+            column="17"
+            startOffset="5854"
+            endLine="65"
+            endColumn="61"
+            endOffset="5898"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;打开日志&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="67"
+            column="77"
+            startOffset="6169"
+            endLine="67"
+            endColumn="96"
+            endOffset="6188"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;屏幕实时 FPS&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="74"
+            column="17"
+            startOffset="6658"
+            endLine="74"
+            endColumn="40"
+            endOffset="6681"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;对比静态与动态画面下的实时帧率和刷新率&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="76"
+            column="17"
+            startOffset="6916"
+            endLine="76"
+            endColumn="51"
+            endOffset="6950"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;打开 FPS 测试&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="78"
+            column="77"
+            startOffset="7221"
+            endLine="78"
+            endColumn="101"
+            endOffset="7245"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;快捷开关工具&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="85"
+            column="17"
+            startOffset="7722"
+            endLine="85"
+            endColumn="38"
+            endOffset="7743"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;触摸显示、坐标、手电筒、震动与屏幕常亮开关&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="87"
+            column="17"
+            startOffset="7978"
+            endLine="87"
+            endColumn="53"
+            endOffset="8014"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;打开快捷工具&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="89"
+            column="77"
+            startOffset="8292"
+            endLine="89"
+            endColumn="98"
+            endOffset="8313"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;充电与电池信息&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="96"
+            column="17"
+            startOffset="8787"
+            endLine="96"
+            endColumn="39"
+            endOffset="8809"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;实时查看电量、电流、电压和温度，并记录电池曲线 CSV&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="98"
+            column="17"
+            startOffset="9044"
+            endLine="98"
+            endColumn="59"
+            endOffset="9086"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;打开电池信息&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="100"
+            column="77"
+            startOffset="9361"
+            endLine="100"
+            endColumn="98"
+            endOffset="9382"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;系统调试开关&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="17"
+            column="13"
+            startOffset="571"
+            endLine="17"
+            endColumn="34"
+            endOffset="592"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;触摸类开关需要 Root 或 ADB 调试授权。&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="28"
+            column="13"
+            startOffset="986"
+            endLine="28"
+            endColumn="52"
+            endOffset="1025"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;显示触摸点、指针与坐标&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="38"
+            column="13"
+            startOffset="1421"
+            endLine="38"
+            endColumn="39"
+            endOffset="1447"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;手电筒&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="49"
+            column="13"
+            startOffset="1884"
+            endLine="49"
+            endColumn="31"
+            endOffset="1902"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;持续震动（500 ms 开 / 300 ms 停）&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="60"
+            column="13"
+            startOffset="2338"
+            endLine="60"
+            endColumn="53"
+            endOffset="2378"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;屏幕常亮（仅本页面）&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="71"
+            column="13"
+            startOffset="2817"
+            endLine="71"
+            endColumn="38"
+            endOffset="2842"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;若设备不允许 App 直接修改触摸调试设置，请在电脑重新运行 start-kernel-bridge.bat 启动命令桥。&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="79"
+            column="13"
+            startOffset="3106"
+            endLine="79"
+            endColumn="89"
+            endOffset="3182"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;正在检查 Root 权限…&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_root_log.xml"
+            line="15"
+            column="9"
+            startOffset="533"
+            endLine="15"
+            endColumn="37"
+            endOffset="561"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_root_log.xml"
+            line="47"
+            column="6"
+            startOffset="1516"
+            endLine="47"
+            endColumn="14"
+            endOffset="1524"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;正在检测设备传感器…&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="19"
+            column="13"
+            startOffset="678"
+            endLine="19"
+            endColumn="38"
+            endOffset="703"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;加速度计&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="30"
+            column="117"
+            startOffset="1345"
+            endLine="30"
+            endColumn="136"
+            endOffset="1364"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialXml"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="31"
+            column="17"
+            startOffset="1473"
+            endLine="31"
+            endColumn="227"
+            endOffset="1683"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="31"
+            column="184"
+            startOffset="1640"
+            endLine="31"
+            endColumn="204"
+            endOffset="1660"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;开启&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="31"
+            column="205"
+            startOffset="1661"
+            endLine="31"
+            endColumn="224"
+            endOffset="1680"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;等待数据&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="33"
+            column="243"
+            startOffset="1954"
+            endLine="33"
+            endColumn="262"
+            endOffset="1973"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;加速度计方向测试滚动小球&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="39"
+            column="17"
+            startOffset="2315"
+            endLine="39"
+            endColumn="58"
+            endOffset="2356"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;陀螺仪&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="46"
+            column="117"
+            startOffset="3117"
+            endLine="46"
+            endColumn="135"
+            endOffset="3135"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialXml"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="47"
+            column="17"
+            startOffset="3244"
+            endLine="47"
+            endColumn="223"
+            endOffset="3450"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="47"
+            column="180"
+            startOffset="3407"
+            endLine="47"
+            endColumn="200"
+            endOffset="3427"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;开启&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="47"
+            column="201"
+            startOffset="3428"
+            endLine="47"
+            endColumn="220"
+            endOffset="3447"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;等待数据&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="49"
+            column="239"
+            startOffset="3717"
+            endLine="49"
+            endColumn="258"
+            endOffset="3736"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;地磁传感器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="56"
+            column="117"
+            startOffset="4565"
+            endLine="56"
+            endColumn="137"
+            endOffset="4585"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialXml"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="57"
+            column="17"
+            startOffset="4694"
+            endLine="57"
+            endColumn="222"
+            endOffset="4899"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="57"
+            column="179"
+            startOffset="4856"
+            endLine="57"
+            endColumn="199"
+            endOffset="4876"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;开启&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="57"
+            column="200"
+            startOffset="4877"
+            endLine="57"
+            endColumn="219"
+            endOffset="4896"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;等待数据&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="59"
+            column="238"
+            startOffset="5165"
+            endLine="59"
+            endColumn="257"
+            endOffset="5184"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;环境光传感器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="66"
+            column="117"
+            startOffset="6012"
+            endLine="66"
+            endColumn="138"
+            endOffset="6033"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialXml"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="67"
+            column="17"
+            startOffset="6142"
+            endLine="67"
+            endColumn="219"
+            endOffset="6344"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="67"
+            column="176"
+            startOffset="6301"
+            endLine="67"
+            endColumn="196"
+            endOffset="6321"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;开启&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="67"
+            column="197"
+            startOffset="6322"
+            endLine="67"
+            endColumn="216"
+            endOffset="6341"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;等待数据&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="69"
+            column="235"
+            startOffset="6607"
+            endLine="69"
+            endColumn="254"
+            endOffset="6626"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;距离传感器&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="76"
+            column="117"
+            startOffset="7486"
+            endLine="76"
+            endColumn="137"
+            endOffset="7506"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialXml"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="77"
+            column="17"
+            startOffset="7615"
+            endLine="77"
+            endColumn="223"
+            endOffset="7821"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="77"
+            column="180"
+            startOffset="7778"
+            endLine="77"
+            endColumn="200"
+            endOffset="7798"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;开启&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="77"
+            column="201"
+            startOffset="7799"
+            endLine="77"
+            endColumn="220"
+            endOffset="7818"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;等待数据&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="79"
+            column="239"
+            startOffset="8088"
+            endLine="79"
+            endColumn="258"
+            endOffset="8107"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;检测到的设备：&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="10"
+            column="96"
+            startOffset="733"
+            endLine="10"
+            endColumn="118"
+            endOffset="755"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;刷新&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="12"
+            column="139"
+            startOffset="1081"
+            endLine="12"
+            endColumn="156"
+            endOffset="1098"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="14"
+            column="10"
+            startOffset="1135"
+            endLine="14"
+            endColumn="18"
+            endOffset="1143"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;手动输入设备路径，例如 /dev/ttyS5&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="15"
+            column="13"
+            startOffset="1263"
+            endLine="15"
+            endColumn="50"
+            endOffset="1300"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;波特率：&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="18"
+            column="96"
+            startOffset="1638"
+            endLine="18"
+            endColumn="115"
+            endOffset="1657"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="20"
+            column="14"
+            startOffset="1837"
+            endLine="20"
+            endColumn="22"
+            endOffset="1845"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;输入自定义波特率&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="21"
+            column="17"
+            startOffset="1966"
+            endLine="21"
+            endColumn="40"
+            endOffset="1989"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;串口设备&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="24"
+            column="96"
+            startOffset="2308"
+            endLine="24"
+            endColumn="115"
+            endOffset="2327"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialXml"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="25"
+            column="13"
+            startOffset="2408"
+            endLine="26"
+            endColumn="108"
+            endOffset="2631"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="26"
+            column="65"
+            startOffset="2588"
+            endLine="26"
+            endColumn="85"
+            endOffset="2608"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;开启&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="26"
+            column="86"
+            startOffset="2609"
+            endLine="26"
+            endColumn="105"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;串口已关闭&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="29"
+            column="13"
+            startOffset="2794"
+            endLine="29"
+            endColumn="33"
+            endOffset="2814"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;接收显示：&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="34"
+            column="92"
+            startOffset="3195"
+            endLine="34"
+            endColumn="112"
+            endOffset="3215"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;导出记录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="37"
+            column="130"
+            startOffset="3609"
+            endLine="37"
+            endColumn="149"
+            endOffset="3628"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;清空接收区&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="38"
+            column="129"
+            startOffset="3760"
+            endLine="38"
+            endColumn="149"
+            endOffset="3780"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;等待接收数据…\n&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="44"
+            column="67"
+            startOffset="4227"
+            endLine="44"
+            endColumn="91"
+            endOffset="4251"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;发送格式：&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="52"
+            column="96"
+            startOffset="4862"
+            endLine="52"
+            endColumn="116"
+            endOffset="4882"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="55"
+            column="10"
+            startOffset="5082"
+            endLine="55"
+            endColumn="18"
+            endOffset="5090"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;输入要发送的文本；HEX 示例：01 03 FF 0A&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="56"
+            column="41"
+            startOffset="5238"
+            endLine="56"
+            endColumn="83"
+            endOffset="5280"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;发送&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="59"
+            column="66"
+            startOffset="5579"
+            endLine="59"
+            endColumn="83"
+            endOffset="5596"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;添加视频&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_video_library.xml"
+            line="8"
+            column="123"
+            startOffset="654"
+            endLine="8"
+            endColumn="142"
+            endOffset="673"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;扫描目录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_video_library.xml"
+            line="9"
+            column="124"
+            startOffset="800"
+            endLine="9"
+            endColumn="143"
+            endOffset="819"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0 个视频&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_video_library.xml"
+            line="11"
+            column="61"
+            startOffset="998"
+            endLine="11"
+            endColumn="81"
+            endOffset="1018"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;点击视频条目进入横屏全屏播放&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_video_library.xml"
+            line="14"
+            column="9"
+            startOffset="1202"
+            endLine="14"
+            endColumn="38"
+            endOffset="1231"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/AudioPlayerActivity.java"
+            line="219"
+            column="30"
+            startOffset="9202"
+            endLine="219"
+            endColumn="81"
+            endOffset="9253"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryChartActivity.java"
+            line="42"
+            column="32"
+            startOffset="1458"
+            endLine="42"
+            endColumn="48"
+            endOffset="1474"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryChartActivity.java"
+            line="87"
+            column="36"
+            startOffset="3579"
+            endLine="88"
+            endColumn="47"
+            endOffset="3650"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryChartActivity.java"
+            line="87"
+            column="36"
+            startOffset="3579"
+            endLine="87"
+            endColumn="47"
+            endOffset="3590"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryChartActivity.java"
+            line="90"
+            column="36"
+            startOffset="3731"
+            endLine="90"
+            endColumn="54"
+            endOffset="3749"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="110"
+            column="46"
+            startOffset="4196"
+            endLine="110"
+            endColumn="67"
+            endOffset="4217"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="173"
+            column="42"
+            startOffset="7238"
+            endLine="173"
+            endColumn="60"
+            endOffset="7256"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="204"
+            column="42"
+            startOffset="8525"
+            endLine="204"
+            endColumn="80"
+            endOffset="8563"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="260"
+            column="33"
+            startOffset="11147"
+            endLine="260"
+            endColumn="60"
+            endOffset="11174"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="372"
+            column="38"
+            startOffset="15766"
+            endLine="372"
+            endColumn="68"
+            endOffset="15796"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="372"
+            column="47"
+            startOffset="15775"
+            endLine="372"
+            endColumn="68"
+            endOffset="15796"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="383"
+            column="37"
+            startOffset="16389"
+            endLine="383"
+            endColumn="52"
+            endOffset="16404"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/BatteryInfoActivity.java"
+            line="430"
+            column="45"
+            startOffset="18689"
+            endLine="430"
+            endColumn="69"
+            endOffset="18713"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/FpsTestActivity.java"
+            line="140"
+            column="26"
+            startOffset="4990"
+            endLine="140"
+            endColumn="43"
+            endOffset="5007"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/FpsTestActivity.java"
+            line="141"
+            column="27"
+            startOffset="5036"
+            endLine="141"
+            endColumn="49"
+            endOffset="5058"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/FullscreenVideoActivity.java"
+            line="171"
+            column="26"
+            startOffset="6651"
+            endLine="171"
+            endColumn="77"
+            endOffset="6702"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialCode"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/SensorActivity.java"
+            line="84"
+            column="13"
+            startOffset="3702"
+            endLine="84"
+            endColumn="54"
+            endOffset="3743"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialCode"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/SensorActivity.java"
+            line="104"
+            column="13"
+            startOffset="4503"
+            endLine="104"
+            endColumn="54"
+            endOffset="4544"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialCode"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/SensorActivity.java"
+            line="152"
+            column="13"
+            startOffset="6339"
+            endLine="152"
+            endColumn="54"
+            endOffset="6380"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialCode"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/SensorActivity.java"
+            line="165"
+            column="13"
+            startOffset="6857"
+            endLine="165"
+            endColumn="54"
+            endOffset="6898"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialCode"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/SensorActivity.java"
+            line="185"
+            column="9"
+            startOffset="7495"
+            endLine="185"
+            endColumn="50"
+            endOffset="7536"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialCode"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `MaterialSwitch` from Material library">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/SerialPortActivity.java"
+            line="63"
+            column="5"
+            startOffset="2316"
+            endLine="63"
+            endColumn="31"
+            endOffset="2342"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/platformtool/SerialPortActivity.java"
+            line="219"
+            column="28"
+            startOffset="9649"
+            endLine="219"
+            endColumn="52"
+            endOffset="9673"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 35"
+            oldString="34"
+            replacement="35"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="12"
+            column="9"
+            startOffset="220"
+            endLine="12"
+            endColumn="23"
+            endOffset="234"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_audio_player.xml"
+            line="4"
+            column="5"
+            startOffset="193"
+            endLine="4"
+            endColumn="40"
+            endOffset="228"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_chart.xml"
+            line="5"
+            column="5"
+            startOffset="197"
+            endLine="5"
+            endColumn="40"
+            endOffset="232"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_battery_info.xml"
+            line="5"
+            column="5"
+            startOffset="195"
+            endLine="5"
+            endColumn="40"
+            endOffset="230"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fps_test.xml"
+            line="5"
+            column="5"
+            startOffset="197"
+            endLine="5"
+            endColumn="40"
+            endOffset="232"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#000000` with a theme that also paints a background (inferred theme is `@style/Theme_PlatformTool_Fullscreen`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_fullscreen_video.xml"
+            line="4"
+            column="5"
+            startOffset="225"
+            endLine="4"
+            endColumn="33"
+            endOffset="253"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="4"
+            column="5"
+            startOffset="191"
+            endLine="4"
+            endColumn="40"
+            endOffset="226"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_quick_tools.xml"
+            line="5"
+            column="5"
+            startOffset="195"
+            endLine="5"
+            endColumn="40"
+            endOffset="230"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_root_log.xml"
+            line="5"
+            column="5"
+            startOffset="197"
+            endLine="5"
+            endColumn="40"
+            endOffset="232"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_sensor.xml"
+            line="5"
+            column="5"
+            startOffset="195"
+            endLine="5"
+            endColumn="40"
+            endOffset="230"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_serial_port.xml"
+            line="4"
+            column="5"
+            startOffset="193"
+            endLine="4"
+            endColumn="40"
+            endOffset="228"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/surface` with a theme that also paints a background (inferred theme is `@style/Theme.PlatformTool`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_video_library.xml"
+            line="4"
+            column="5"
+            startOffset="193"
+            endLine="4"
+            endColumn="40"
+            endOffset="228"/>
+    </incident>
+
+</incidents>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_050">#EFF8FF</color>
+    <color name="blue_700">#175CD3</color>
+    <color name="blue_800">#1849A9</color>
+    <color name="card">#FFFFFF</color>
+    <color name="divider">#EAECF0</color>
+    <color name="green_700">#027A48</color>
+    <color name="log_background">#101828</color>
+    <color name="log_text">#EAECF0</color>
+    <color name="status_error">#B42318</color>
+    <color name="status_ok">#027A48</color>
+    <color name="surface">#F8FAFC</color>
+    <color name="text_primary">#101828</color>
+    <color name="text_secondary">#475467</color>
+    <string name="app_name">平台硬件工具</string>
+    <string name="fps_title">屏幕实时 FPS</string>
+    <string name="log_auto_scroll">自动滚动</string>
+    <string name="log_buffer">缓冲区</string>
+    <string name="log_clear">清空窗口</string>
+    <string name="log_export">导出</string>
+    <string name="log_keyword_hint">关键字过滤（不区分大小写）</string>
+    <string name="log_level">最低等级</string>
+    <string name="log_pause">暂停</string>
+    <string name="log_resume">继续</string>
+    <string name="media_title">媒体播放</string>
+    <string name="root_log_title">Root 日志查看器</string>
+    <string name="sensor_title">传感器监测</string>
+    <style name="Theme.PlatformTool" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/blue_700</item>
+        <item name="colorPrimaryDark">@color/blue_800</item>
+        <item name="colorAccent">@color/green_700</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/card</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="Theme.PlatformTool.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">@color/green_700</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+    </style>
+</resources>

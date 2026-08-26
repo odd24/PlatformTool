@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PlatformTool" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/blue_700</item>
+        <item name="colorPrimaryDark">@color/blue_800</item>
+        <item name="colorAccent">@color/green_700</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:navigationBarColor">@color/card</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="Theme.PlatformTool.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">@color/green_700</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+    </style>
+</resources>
