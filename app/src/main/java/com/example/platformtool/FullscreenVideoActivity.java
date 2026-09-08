@@ -54,6 +54,7 @@ public class FullscreenVideoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fullscreen_video);
         bindViews();
         setupControls();
+        MediaLibraryStore.ensureLoaded(this, items, false);
         resolveInitialVideo();
         enterImmersiveMode();
         handler.post(progressUpdater);
@@ -110,6 +111,7 @@ public class FullscreenVideoActivity extends AppCompatActivity {
             }
             currentIndex = MediaFileHelper.addIfMissing(items,
                     new MediaEntry(Uri.parse(fallbackUri), fallbackName));
+            MediaLibraryStore.save(this, items, false);
         }
         load(currentIndex);
     }

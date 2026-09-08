@@ -10,8 +10,8 @@ android {
         applicationId = "com.example.platformtool"
         minSdk = 23
         targetSdk = 34
-        versionCode = 30
-        versionName = "1.29"
+        versionCode = 32
+        versionName = "1.31"
     }
 
     buildTypes {

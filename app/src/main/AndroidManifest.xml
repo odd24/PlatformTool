@@ -47,6 +47,7 @@
             android:name=".FpsTestActivity"
             android:screenOrientation="unspecified" />
         <activity android:name=".QuickToolsActivity" />
+        <activity android:name=".ConsoleActivity" />
         <activity
             android:name=".BatteryInfoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />

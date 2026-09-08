@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, QuickToolsActivity.class));
         View.OnClickListener openBatteryInfo = v ->
                 startActivity(new Intent(this, BatteryInfoActivity.class));
+        View.OnClickListener openConsole = v ->
+                startActivity(new Intent(this, ConsoleActivity.class));
 
         findViewById(R.id.audioCard).setOnClickListener(openAudio);
         findViewById(R.id.openAudioButton).setOnClickListener(openAudio);
@@ -46,5 +48,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.openQuickToolsButton).setOnClickListener(openQuickTools);
         findViewById(R.id.batteryCard).setOnClickListener(openBatteryInfo);
         findViewById(R.id.openBatteryButton).setOnClickListener(openBatteryInfo);
+        findViewById(R.id.consoleCard).setOnClickListener(openConsole);
+        findViewById(R.id.openConsoleButton).setOnClickListener(openConsole);
     }
 }

@@ -24,6 +24,7 @@ public class VideoLibraryActivity extends AppCompatActivity {
     private final ExecutorService scanExecutor = Executors.newSingleThreadExecutor();
     private ArrayAdapter<String> adapter;
     private TextView countText;
+    private android.widget.Button scanButton;
 
     private final ActivityResultLauncher<String[]> filePicker = registerForActivityResult(
             new ActivityResultContracts.OpenDocument(), this::addFile);
@@ -43,7 +44,9 @@ public class VideoLibraryActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         listView.setOnItemClickListener((parent, view, position, id) -> openVideo(position));
         findViewById(R.id.addVideoButton).setOnClickListener(v -> filePicker.launch(new String[]{"video/*"}));
-        findViewById(R.id.scanVideoButton).setOnClickListener(v -> folderPicker.launch(null));
+        scanButton = findViewById(R.id.scanVideoButton);
+        scanButton.setOnClickListener(v -> folderPicker.launch(null));
+        MediaLibraryStore.ensureLoaded(this, items, false);
         refreshList();
     }
 
@@ -52,6 +55,7 @@ public class VideoLibraryActivity extends AppCompatActivity {
         MediaFileHelper.persistReadPermission(getContentResolver(), uri);
         int index = MediaFileHelper.addIfMissing(items,
                 new MediaEntry(uri, MediaFileHelper.displayName(getContentResolver(), uri)));
+        MediaLibraryStore.save(this, items, false);
         refreshList();
         openVideo(index);
     }
@@ -59,13 +63,18 @@ public class VideoLibraryActivity extends AppCompatActivity {
     private void scanFolder(Uri treeUri) {
         if (treeUri == null) return;
         MediaFileHelper.persistReadPermission(getContentResolver(), treeUri);
+        scanButton.setEnabled(false);
+        scanButton.setText("扫描中…");
         Toast.makeText(this, "正在扫描视频目录…", Toast.LENGTH_SHORT).show();
         scanExecutor.execute(() -> {
             List<MediaEntry> found = MediaDirectoryScanner.scan(getContentResolver(), treeUri, false);
             runOnUiThread(() -> {
                 if (isFinishing() || isDestroyed()) return;
                 int added = MediaFileHelper.merge(items, found);
+                MediaLibraryStore.save(this, items, false);
                 refreshList();
+                scanButton.setEnabled(true);
+                scanButton.setText("扫描目录");
                 Toast.makeText(this, String.format(Locale.getDefault(),
                         "扫描完成：找到 %d 个，新增 %d 个", found.size(), added), Toast.LENGTH_LONG).show();
             });

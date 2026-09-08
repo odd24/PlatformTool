@@ -99,5 +99,16 @@
             <Button android:id="@+id/openBatteryButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开电池信息" />
         </LinearLayout>
+
+        <LinearLayout android:id="@+id/consoleCard" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background"
+            android:clickable="true" android:elevation="2dp" android:focusable="true" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Console 命令终端" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="执行 Shell/Root 命令，支持实时输出、历史、停止和导出" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <Button android:id="@+id/openConsoleButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开 Console" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

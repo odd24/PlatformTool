@@ -42,6 +42,7 @@ public class AudioPlayerActivity extends AppCompatActivity {
     private Button playPauseButton;
     private Button previousButton;
     private Button nextButton;
+    private Button scanButton;
     private Spinner loopSpinner;
     private MediaPlayer player;
     private int currentIndex = -1;
@@ -69,6 +70,7 @@ public class AudioPlayerActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         bindViews();
         setupListAndControls();
+        MediaLibraryStore.ensureLoaded(this, items, true);
         refreshList();
         handler.post(progressUpdater);
     }
@@ -82,6 +84,7 @@ public class AudioPlayerActivity extends AppCompatActivity {
         playPauseButton = findViewById(R.id.audioPlayPauseButton);
         previousButton = findViewById(R.id.audioPreviousButton);
         nextButton = findViewById(R.id.audioNextButton);
+        scanButton = findViewById(R.id.scanAudioButton);
         loopSpinner = findViewById(R.id.audioBottomLoopSpinner);
     }
 
@@ -90,7 +93,7 @@ public class AudioPlayerActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         listView.setOnItemClickListener((parent, view, position, id) -> load(position, true));
         findViewById(R.id.addAudioButton).setOnClickListener(v -> filePicker.launch(new String[]{"audio/*"}));
-        findViewById(R.id.scanAudioButton).setOnClickListener(v -> folderPicker.launch(null));
+        scanButton.setOnClickListener(v -> folderPicker.launch(null));
 
         loopSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,
                 new String[]{"不循环", "单曲循环", "列表循环"}));
@@ -120,6 +123,7 @@ public class AudioPlayerActivity extends AppCompatActivity {
         MediaFileHelper.persistReadPermission(getContentResolver(), uri);
         int index = MediaFileHelper.addIfMissing(items,
                 new MediaEntry(uri, MediaFileHelper.displayName(getContentResolver(), uri)));
+        MediaLibraryStore.save(this, items, true);
         refreshList();
         load(index, false);
     }
@@ -127,13 +131,18 @@ public class AudioPlayerActivity extends AppCompatActivity {
     private void scanFolder(Uri treeUri) {
         if (treeUri == null) return;
         MediaFileHelper.persistReadPermission(getContentResolver(), treeUri);
+        scanButton.setEnabled(false);
+        scanButton.setText("扫描中…");
         Toast.makeText(this, "正在扫描音乐目录…", Toast.LENGTH_SHORT).show();
         scanExecutor.execute(() -> {
             List<MediaEntry> found = MediaDirectoryScanner.scan(getContentResolver(), treeUri, true);
             runOnUiThread(() -> {
                 if (isFinishing() || isDestroyed()) return;
                 int added = MediaFileHelper.merge(items, found);
+                MediaLibraryStore.save(this, items, true);
                 refreshList();
+                scanButton.setEnabled(true);
+                scanButton.setText("扫描目录");
                 Toast.makeText(this, String.format(Locale.getDefault(),
                         "扫描完成：找到 %d 首，新增 %d 首", found.size(), added), Toast.LENGTH_LONG).show();
             });
