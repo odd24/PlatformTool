@@ -166,6 +166,14 @@ inverseSurface / inverseOnSurface / inversePrimary
 - 不使用 emoji 作为正式功能图标。
 - 纯图标按钮必须有 content description 和可见 tooltip/说明能力。
 
+### 3.6 当前 token 实现映射
+
+- Compose token 统一由 `core/ui/PlatformTheme.kt` 和 `PlatformTokens.kt` 暴露；业务 Composable 不复制颜色、字号、间距、形状或动效常量。
+- XML 迁移层通过 `Theme.PlatformTool` 的 Material 3 Bridge 和 `pt_*` 语义资源消费同一套浅深色角色；旧颜色名只作为待迁移页面的兼容别名，不得被新页面引用。
+- 固定回退主题以 `#5B5BD6` 建议种子生成并经对比度调整，实际 primary 为浅色 `#4F4CB7`、深色 `#C4C0FF`；Success、Warning、Info 使用独立扩展角色，不随动态品牌色变化。
+- 响应式断点固定为 Compact `<600dp`、Medium `600～839dp`、Expanded `≥840dp`，通过 Material 3 Adaptive 的窗口信息触发重组，不依据设备型号或方向。
+- 稳定动效时长为 150ms、200ms、250ms；XML 和 Compose 均从集中 token 读取。
+
 ## 4. 页面骨架
 
 ### 4.1 应用首页

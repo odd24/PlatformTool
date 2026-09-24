@@ -1,20 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.PlatformTool" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/blue_700</item>
-        <item name="colorPrimaryDark">@color/blue_800</item>
-        <item name="colorAccent">@color/green_700</item>
+    <style name="Theme.PlatformTool" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/pt_primary</item>
+        <item name="colorOnPrimary">@color/pt_on_primary</item>
+        <item name="colorPrimaryContainer">@color/pt_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/pt_on_primary_container</item>
+        <item name="colorSecondary">@color/pt_secondary</item>
+        <item name="colorOnSecondary">@color/pt_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/pt_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/pt_on_secondary_container</item>
+        <item name="colorTertiary">@color/pt_tertiary</item>
+        <item name="colorOnTertiary">@color/pt_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/pt_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/pt_on_tertiary_container</item>
+        <item name="colorSurface">@color/pt_surface</item>
+        <item name="colorSurfaceContainerLow">@color/pt_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/pt_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/pt_surface_container_high</item>
+        <item name="colorOnSurface">@color/pt_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/pt_on_surface_variant</item>
+        <item name="colorOutline">@color/pt_outline</item>
+        <item name="colorOutlineVariant">@color/pt_outline_variant</item>
+        <item name="colorPrimaryInverse">@color/pt_inverse_primary</item>
+        <item name="colorError">@color/pt_error</item>
+        <item name="colorOnError">@color/pt_on_error</item>
+        <item name="colorErrorContainer">@color/pt_error_container</item>
+        <item name="colorOnErrorContainer">@color/pt_on_error_container</item>
         <item name="android:fontFamily">sans</item>
-        <item name="android:windowBackground">@color/surface</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:navigationBarColor">@color/card</item>
+        <item name="android:windowBackground">@color/pt_surface</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowActionModeOverlay">true</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.PlatformTool.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.PlatformTool.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.PlatformTool.Large</item>
+        <item name="ptColorSuccess">@color/pt_success</item>
+        <item name="ptColorOnSuccess">@color/pt_on_success</item>
+        <item name="ptColorSuccessContainer">@color/pt_success_container</item>
+        <item name="ptColorOnSuccessContainer">@color/pt_on_success_container</item>
+        <item name="ptColorWarning">@color/pt_warning</item>
+        <item name="ptColorOnWarning">@color/pt_on_warning</item>
+        <item name="ptColorWarningContainer">@color/pt_warning_container</item>
+        <item name="ptColorOnWarningContainer">@color/pt_on_warning_container</item>
+        <item name="ptColorInfo">@color/pt_info</item>
+        <item name="ptColorOnInfo">@color/pt_on_info</item>
+        <item name="ptColorInfoContainer">@color/pt_info_container</item>
+        <item name="ptColorOnInfoContainer">@color/pt_on_info_container</item>
+        <item name="ptSpacingXxs">@dimen/pt_space_xxs</item>
+        <item name="ptSpacingXs">@dimen/pt_space_xs</item>
+        <item name="ptSpacingSm">@dimen/pt_space_sm</item>
+        <item name="ptSpacingMd">@dimen/pt_space_md</item>
+        <item name="ptSpacingLg">@dimen/pt_space_lg</item>
+        <item name="ptSpacingXl">@dimen/pt_space_xl</item>
+        <item name="ptSpacingXxl">@dimen/pt_space_xxl</item>
+        <item name="ptTouchTarget">@dimen/pt_touch_target</item>
+        <item name="ptBorderThin">@dimen/pt_border_thin</item>
+        <item name="ptMotionShort">@integer/pt_motion_short</item>
+        <item name="ptMotionStandard">@integer/pt_motion_standard</item>
+        <item name="ptMotionEmphasized">@integer/pt_motion_emphasized</item>
     </style>
 
-    <style name="Theme.PlatformTool.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="ShapeAppearance.PlatformTool.Small" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="cornerSize">@dimen/pt_shape_small</item>
+    </style>
+
+    <style name="ShapeAppearance.PlatformTool.Medium" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">@dimen/pt_shape_medium</item>
+    </style>
+
+    <style name="ShapeAppearance.PlatformTool.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerSize">@dimen/pt_shape_large</item>
+        <item name="cornerSizeTopLeft">@dimen/pt_shape_extra_large</item>
+        <item name="cornerSizeBottomRight">@dimen/pt_shape_extra_large</item>
+    </style>
+
+    <style name="Theme.PlatformTool.Fullscreen" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowActionModeOverlay">true</item>
-        <item name="android:colorAccent">@color/green_700</item>
+        <item name="android:colorAccent">@color/pt_primary</item>
         <item name="android:navigationBarColor">#000000</item>
         <item name="android:windowBackground">#000000</item>
     </style>

@@ -256,17 +256,19 @@ ToolDescriptor
 
 验证：首页和快捷工具页的 XML/Java 用户文案已迁入 string resources，Lint 对两个页面及主题均无剩余告警；两个 flavor 的总 warning 从 202 降至 166（HardcodedText 127→93、Overdraw 12→10），未新增 suppress。`ciCheck`、两个 Release assemble 和 API 34 上两个 flavor 的 instrumentation 启动测试通过；3000×2000 横屏截图与 UIAutomator 层级确认文案、普通版能力隐藏及页面背景无视觉回归。
 
-#### P1-T05 视觉设计系统基线
+#### P1-T05 视觉设计系统基线 `[~]`
 
-- [ ] 按 `docs/UI_UX_SPEC.md` 建立浅色/深色语义颜色、排版、间距、圆角、边界和动效 token。
+- [x] 按 `docs/UI_UX_SPEC.md` 建立浅色/深色语义颜色、排版、间距、圆角、边界和动效 token。
 - [ ] 建立 Compose Material 3 应用壳，迁移期为 XML 页面提供同 token 的 Material 3 Bridge 主题。
 - [ ] Android 12+ 支持 Dynamic Color，旧系统和用户关闭动态色时使用全新 PlatformTool Calm Expressive 回退主题。
 - [ ] 全应用启用 edge-to-edge，统一处理系统栏、IME、显示缺口和手势区域 insets。
 - [ ] 使用 Window Size Class/Material 3 Adaptive 建立手机、宽屏和多窗口布局策略。
-- [ ] 建立 Top App Bar、Tool Card、Status Banner、Metric Card、Empty/Error State 和工程输出区等核心组件。
+- [x] 建立 Top App Bar、Tool Card、Status Banner、Metric Card、Empty/Error State 和工程输出区等核心组件。
 - [ ] 首页、一个标准工具页和一个工程密集页完成视觉评审，作为后续迁移基准。
 - [ ] 为核心组件准备浅色、深色、字体放大和宽屏预览/截图。
 - [ ] 停止扩展旧 AppCompat 蓝绿主题；迁移完成页面只能使用 Material 3 语义角色和扩展状态 token。
+
+阶段验证：设计系统基础层使用 Kotlin 2.0.21 对应的 Compose Compiler 插件、Compose BOM 2024.09.03、Material 3 和稳定版 Adaptive 1.0.0；这是当前 AGP 8.5.2、compileSdk 34 构建链可验证的稳定组合，避免在视觉任务中混入工具链升级。Compose 与 XML Bridge 共享浅深色 Material 语义角色、稳定状态色、4dp 间距网格、形状和 150～250ms 动效 token；核心组件提供浅色、深色、1.3 倍字体和 840dp 宽屏预览。两个 flavor 的 Debug assemble、`ciCheck` 和 API 34 启动测试通过，Lint 仍为 0 error、166 warning，触达文件无告警。应用壳、动态色开关、全应用 edge-to-edge 与三类参考页面仍在本任务后续批次完成，本任务不得提前标记完成。
 
 退出条件：两种产品形态都能构建；普通版不包含工程专属权限和入口；三类参考页面通过 UI/UX 规范验收。
 

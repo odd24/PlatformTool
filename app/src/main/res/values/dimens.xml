@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pt_space_xxs">4dp</dimen>
+    <dimen name="pt_space_xs">8dp</dimen>
+    <dimen name="pt_space_sm">12dp</dimen>
+    <dimen name="pt_space_md">16dp</dimen>
+    <dimen name="pt_space_lg">24dp</dimen>
+    <dimen name="pt_space_xl">32dp</dimen>
+    <dimen name="pt_space_xxl">40dp</dimen>
+    <dimen name="pt_touch_target">48dp</dimen>
+    <dimen name="pt_shape_small">12dp</dimen>
+    <dimen name="pt_shape_medium">16dp</dimen>
+    <dimen name="pt_shape_large">20dp</dimen>
+    <dimen name="pt_shape_extra_large">24dp</dimen>
+    <dimen name="pt_border_thin">1dp</dimen>
+</resources>

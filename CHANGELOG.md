@@ -45,6 +45,7 @@
 - [P1-T01] 引入 Gradle Version Catalog 和 Kotlin Android 2.0.21，启用 ViewBinding，并将 Java/Kotlin 编译目标统一为 JVM 17；单模块阶段继续使用根构建脚本承载共享约定。
 - [P1-T02] 构建、安装、真机测试和 ADB Bridge 命令改用明确的 flavor；工程版应用 ID 为 `com.example.platformtool.engineering`，名称和版本名带工程版标识。
 - [P1-T04] 首页与快捷工具页的用户文案迁入 string resources，主题统一提供窗口背景并移除页面根布局重复背景；相关 Lint warning 减少 36 个。
+- [P1-T05] 开始建立 Calm Expressive 设计系统：加入与现有工具链兼容的 Compose Material 3/Adaptive 基线、浅深色语义 token、XML Material 3 Bridge 主题、响应式策略和核心状态/数据/工程输出组件预览。
 
 ### 修复
 

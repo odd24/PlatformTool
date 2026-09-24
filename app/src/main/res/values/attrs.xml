@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ptColorSuccess" format="color" />
+    <attr name="ptColorOnSuccess" format="color" />
+    <attr name="ptColorSuccessContainer" format="color" />
+    <attr name="ptColorOnSuccessContainer" format="color" />
+    <attr name="ptColorWarning" format="color" />
+    <attr name="ptColorOnWarning" format="color" />
+    <attr name="ptColorWarningContainer" format="color" />
+    <attr name="ptColorOnWarningContainer" format="color" />
+    <attr name="ptColorInfo" format="color" />
+    <attr name="ptColorOnInfo" format="color" />
+    <attr name="ptColorInfoContainer" format="color" />
+    <attr name="ptColorOnInfoContainer" format="color" />
+    <attr name="ptSpacingXxs" format="dimension" />
+    <attr name="ptSpacingXs" format="dimension" />
+    <attr name="ptSpacingSm" format="dimension" />
+    <attr name="ptSpacingMd" format="dimension" />
+    <attr name="ptSpacingLg" format="dimension" />
+    <attr name="ptSpacingXl" format="dimension" />
+    <attr name="ptSpacingXxl" format="dimension" />
+    <attr name="ptTouchTarget" format="dimension" />
+    <attr name="ptBorderThin" format="dimension" />
+    <attr name="ptMotionShort" format="integer" />
+    <attr name="ptMotionStandard" format="integer" />
+    <attr name="ptMotionEmphasized" format="integer" />
+</resources>

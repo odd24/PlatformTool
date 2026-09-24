@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- PlatformTool Calm Expressive semantic roles. New UI consumes these roles only. -->
+    <color name="pt_primary">#4F4CB7</color>
+    <color name="pt_on_primary">#FFFFFF</color>
+    <color name="pt_primary_container">#E3E0FF</color>
+    <color name="pt_on_primary_container">#17105C</color>
+    <color name="pt_secondary">#5F5D72</color>
+    <color name="pt_on_secondary">#FFFFFF</color>
+    <color name="pt_secondary_container">#E5E1F9</color>
+    <color name="pt_on_secondary_container">#1C1A2C</color>
+    <color name="pt_tertiary">#7B5265</color>
+    <color name="pt_on_tertiary">#FFFFFF</color>
+    <color name="pt_tertiary_container">#FFD8E6</color>
+    <color name="pt_on_tertiary_container">#301121</color>
+    <color name="pt_surface">#FBF8FF</color>
+    <color name="pt_surface_container_low">#F5F2FA</color>
+    <color name="pt_surface_container">#EFECF4</color>
+    <color name="pt_surface_container_high">#E9E6EE</color>
+    <color name="pt_on_surface">#1B1B21</color>
+    <color name="pt_on_surface_variant">#47464F</color>
+    <color name="pt_outline">#787680</color>
+    <color name="pt_outline_variant">#C8C5D0</color>
+    <color name="pt_error">#BA1A1A</color>
+    <color name="pt_on_error">#FFFFFF</color>
+    <color name="pt_error_container">#FFDAD6</color>
+    <color name="pt_on_error_container">#410002</color>
+    <color name="pt_inverse_surface">#303036</color>
+    <color name="pt_inverse_on_surface">#F3F0F7</color>
+    <color name="pt_inverse_primary">#C4C0FF</color>
+    <color name="pt_success">#176B45</color>
+    <color name="pt_on_success">#FFFFFF</color>
+    <color name="pt_success_container">#A5F2C4</color>
+    <color name="pt_on_success_container">#002112</color>
+    <color name="pt_warning">#7A5900</color>
+    <color name="pt_on_warning">#FFFFFF</color>
+    <color name="pt_warning_container">#FFDEA1</color>
+    <color name="pt_on_warning_container">#261900</color>
+    <color name="pt_info">#3C6090</color>
+    <color name="pt_on_info">#FFFFFF</color>
+    <color name="pt_info_container">#D4E3FF</color>
+    <color name="pt_on_info_container">#001C3A</color>
+
+    <!-- Compatibility aliases for pages awaiting migration to semantic roles. -->
     <color name="blue_700">#175CD3</color>
-    <color name="blue_800">#1849A9</color>
     <color name="blue_050">#EFF8FF</color>
     <color name="green_700">#027A48</color>
-    <color name="surface">#F8FAFC</color>
-    <color name="card">#FFFFFF</color>
-    <color name="text_primary">#101828</color>
-    <color name="text_secondary">#475467</color>
-    <color name="divider">#EAECF0</color>
-    <color name="log_background">#101828</color>
-    <color name="log_text">#EAECF0</color>
-    <color name="status_ok">#027A48</color>
-    <color name="status_error">#B42318</color>
+    <color name="surface">@color/pt_surface</color>
+    <color name="card">@color/pt_surface_container_low</color>
+    <color name="text_primary">@color/pt_on_surface</color>
+    <color name="text_secondary">@color/pt_on_surface_variant</color>
+    <color name="divider">@color/pt_outline_variant</color>
+    <color name="log_background">@color/pt_inverse_surface</color>
+    <color name="log_text">@color/pt_inverse_on_surface</color>
+    <color name="status_ok">@color/pt_success</color>
+    <color name="status_error">@color/pt_error</color>
 </resources>
