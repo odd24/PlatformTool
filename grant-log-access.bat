@@ -18,12 +18,12 @@ echo [1/3] Waiting for Android device...
 if errorlevel 1 goto :failed
 
 echo [2/3] Granting persistent READ_LOGS permission...
-"%ADB%" shell pm grant com.example.platformtool android.permission.READ_LOGS
+"%ADB%" shell pm grant com.example.platformtool.engineering android.permission.READ_LOGS
 if errorlevel 1 goto :failed
 
 echo [3/3] Restarting PlatformTool...
-"%ADB%" shell am force-stop com.example.platformtool
-"%ADB%" shell monkey -p com.example.platformtool -c android.intent.category.LAUNCHER 1 >nul
+"%ADB%" shell am force-stop com.example.platformtool.engineering
+"%ADB%" shell monkey -p com.example.platformtool.engineering -c android.intent.category.LAUNCHER 1 >nul
 
 echo Persistent log access granted successfully.
 echo Main, System, Radio, Events, Crash and All can now refresh continuously.

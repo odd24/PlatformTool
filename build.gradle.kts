@@ -5,11 +5,15 @@ plugins {
 
 tasks.register("ciCheck") {
     group = "verification"
-    description = "Builds the app and Android test APK, then runs JVM tests and lint."
+    description = "Builds both product flavors and test APKs, then runs JVM tests and lint."
     dependsOn(
-        ":app:assembleDebug",
-        ":app:assembleDebugAndroidTest",
-        ":app:testDebugUnitTest",
-        ":app:lintDebug"
+        ":app:assembleStandardDebug",
+        ":app:assembleEngineeringDebug",
+        ":app:assembleStandardDebugAndroidTest",
+        ":app:assembleEngineeringDebugAndroidTest",
+        ":app:testStandardDebugUnitTest",
+        ":app:testEngineeringDebugUnitTest",
+        ":app:lintStandardDebug",
+        ":app:lintEngineeringDebug"
     )
 }

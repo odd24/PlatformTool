@@ -1,6 +1,6 @@
 # PlatformTool
 
-PlatformTool（平台硬件工具）是一款面向 Android 工程设备、系统调试和硬件验证场景的工具应用。它将媒体测试、串口收发、传感器监测、日志查看、屏幕 FPS、快捷硬件开关和电池记录集中在一个应用中。
+PlatformTool（平台硬件工具）提供普通版和工程版：普通版面向常规媒体、传感器和硬件检查，工程版额外提供串口、Root 日志、Console 和受保护系统设置能力。
 
 ## 主要功能
 
@@ -23,11 +23,18 @@ PlatformTool（平台硬件工具）是一款面向 Android 工程设备、系�
 
 ## 构建与安装
 
-使用 Android Studio 打开项目并运行 `app`，或在项目根目录执行：
+使用 Android Studio 打开项目并选择明确的 variant，或在项目根目录构建普通版：
 
 ```powershell
-.\gradlew.bat assembleDebug
-adb install -r .\app\build\outputs\apk\debug\app-debug.apk
+.\gradlew.bat assembleStandardDebug
+adb install -r .\app\build\outputs\apk\standard\debug\app-standard-debug.apk
+```
+
+工程版使用独立应用 ID，可与普通版并存安装：
+
+```powershell
+.\gradlew.bat assembleEngineeringDebug
+adb install -r .\app\build\outputs\apk\engineering\debug\app-engineering-debug.apk
 ```
 
 提交前可用不依赖 Android Studio 的统一命令执行 Debug 构建、JVM 测试、Lint 和 instrumentation test APK 编译：
@@ -36,17 +43,18 @@ adb install -r .\app\build\outputs\apk\debug\app-debug.apk
 .\gradlew.bat ciCheck
 ```
 
-连接 Android 设备后，使用 `.\gradlew.bat connectedDebugAndroidTest` 执行真机 instrumentation test。
+连接 Android 设备后，使用 `.\gradlew.bat connectedStandardDebugAndroidTest connectedEngineeringDebugAndroidTest` 执行两种产品形态的真机 instrumentation test。
 
-默认应用 ID：
+应用 ID：
 
 ```text
-com.example.platformtool
+standard:    com.example.platformtool
+engineering: com.example.platformtool.engineering
 ```
 
 ## 日志访问权限
 
-普通应用不能直接读取完整的 Android 系统日志。连接已启用 USB 调试的设备后，可以运行：
+普通版不声明 `READ_LOGS` 或 `WRITE_SECURE_SETTINGS`。安装工程版并连接已启用 USB 调试的设备后，可以运行：
 
 ```powershell
 .\grant-log-access.bat

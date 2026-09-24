@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.provider.Settings;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,7 +61,7 @@ public class QuickToolsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quick_tools);
-        setTitle("快捷开关工具");
+        setTitle(R.string.quick_tools_title);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
@@ -79,9 +80,16 @@ public class QuickToolsActivity extends AppCompatActivity {
             flashlightSwitch.setText("手电筒（设备未检测到闪光灯）");
         }
 
-        showTouchesSwitch.setOnCheckedChangeListener((button, checked) -> {
-            if (!updatingSwitch) changeTouchDebugSetting(checked);
-        });
+        if (BuildConfig.ENGINEERING_FEATURES) {
+            showTouchesSwitch.setOnCheckedChangeListener((button, checked) -> {
+                if (!updatingSwitch) changeTouchDebugSetting(checked);
+            });
+            refreshProtectedSwitches();
+        } else {
+            showTouchesSwitch.setVisibility(View.GONE);
+            findViewById(R.id.quickToolsEngineeringHelp).setVisibility(View.GONE);
+            statusView.setText(R.string.quick_tools_standard_status);
+        }
         flashlightSwitch.setOnCheckedChangeListener((button, checked) -> {
             if (!updatingSwitch) requestTorch(checked);
         });
@@ -95,13 +103,14 @@ public class QuickToolsActivity extends AppCompatActivity {
                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             }
         });
-        refreshProtectedSwitches();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (showTouchesSwitch != null) refreshProtectedSwitches();
+        if (BuildConfig.ENGINEERING_FEATURES && showTouchesSwitch != null) {
+            refreshProtectedSwitches();
+        }
     }
 
     private void refreshProtectedSwitches() {

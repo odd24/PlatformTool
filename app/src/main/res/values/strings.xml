@@ -13,4 +13,6 @@
     <string name="log_clear">清空窗口</string>
     <string name="log_export">导出</string>
     <string name="log_auto_scroll">自动滚动</string>
+    <string name="quick_tools_standard_status">手电筒、震动和屏幕常亮可直接使用。</string>
+    <string name="quick_tools_title">快捷开关工具</string>
 </resources>

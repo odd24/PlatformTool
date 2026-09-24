@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">平台硬件工具（工程版）</string>
+    <string name="quick_tools_description">触摸显示、坐标、手电筒、震动与屏幕常亮开关</string>
+</resources>

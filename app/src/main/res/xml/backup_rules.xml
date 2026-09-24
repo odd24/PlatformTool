@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="console.xml" />
+    <exclude domain="file" path="kernel.bridge" />
+    <exclude domain="file" path="kernel.log" />
+    <exclude domain="file" path="quick-tools.bridge" />
+    <exclude domain="file" path="quick-tools.request" />
+    <exclude domain="file" path="quick-tools.response" />
+</full-backup-content>

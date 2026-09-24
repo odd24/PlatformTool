@@ -9,6 +9,8 @@ android {
     namespace = "com.example.platformtool"
     compileSdk = 34
 
+    flavorDimensions += "distribution"
+
     defaultConfig {
         applicationId = "com.example.platformtool"
         minSdk = 23
@@ -28,12 +30,26 @@ android {
         }
     }
 
+    productFlavors {
+        create("standard") {
+            dimension = "distribution"
+            buildConfigField("boolean", "ENGINEERING_FEATURES", "false")
+        }
+        create("engineering") {
+            dimension = "distribution"
+            applicationIdSuffix = ".engineering"
+            versionNameSuffix = "-engineering"
+            buildConfigField("boolean", "ENGINEERING_FEATURES", "true")
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
 
     buildFeatures {
+        buildConfig = true
         viewBinding = true
     }
 }

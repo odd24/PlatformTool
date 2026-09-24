@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="系统调试开关"
+            android:text="@string/quick_tools_title"
             android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -73,6 +73,7 @@
             android:textSize="17sp" />
 
         <TextView
+            android:id="@+id/quickToolsEngineeringHelp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"

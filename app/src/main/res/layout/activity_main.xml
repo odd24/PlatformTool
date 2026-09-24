@@ -84,7 +84,7 @@
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="快捷开关工具" android:textColor="@color/text_primary" android:textSize="21sp" android:textStyle="bold" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
-                android:text="触摸显示、坐标、手电筒、震动与屏幕常亮开关" android:textColor="@color/text_secondary" android:textSize="14sp" />
+                android:text="@string/quick_tools_description" android:textColor="@color/text_secondary" android:textSize="14sp" />
             <Button android:id="@+id/openQuickToolsButton" android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_gravity="end" android:layout_marginTop="8dp" android:text="打开快捷工具" />
         </LinearLayout>

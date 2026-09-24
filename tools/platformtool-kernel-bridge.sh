@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-PACKAGE="com.example.platformtool"
+PACKAGE="com.example.platformtool.engineering"
 PID_FILE="/data/local/tmp/platformtool-kernel-bridge.pid"
 QUICK_PID_FILE="/data/local/tmp/platformtool-quick-tools-bridge.pid"
 

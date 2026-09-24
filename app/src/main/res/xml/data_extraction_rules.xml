@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="console.xml" />
+        <exclude domain="file" path="kernel.bridge" />
+        <exclude domain="file" path="kernel.log" />
+        <exclude domain="file" path="quick-tools.bridge" />
+        <exclude domain="file" path="quick-tools.request" />
+        <exclude domain="file" path="quick-tools.response" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="console.xml" />
+        <exclude domain="file" path="kernel.bridge" />
+        <exclude domain="file" path="kernel.log" />
+        <exclude domain="file" path="quick-tools.bridge" />
+        <exclude domain="file" path="quick-tools.request" />
+        <exclude domain="file" path="quick-tools.response" />
+    </device-transfer>
+</data-extraction-rules>

@@ -226,15 +226,17 @@ ToolDescriptor
 - [x] 把 Java/Kotlin 编译目标统一为同一 JVM 版本。
 - [x] 建立可复用的 Android/Kotlin 编译约定；当前仅有 `:app`，约定集中在版本目录和根脚本，待 P6 多模块拆分时再提取 convention plugin。
 
-验证：`clean assembleDebug testDebugUnitTest lintDebug`、`ciCheck` 和 API 34 `connectedDebugAndroidTest` 通过；Kotlin/Java 均目标 JVM 17，Kotlin 编译烟测通过，Lint 为 0 error、204 warning（未新增业务代码告警）。
+验证：引入 flavor 前的 `clean assembleDebug testDebugUnitTest lintDebug` 与 API 34 `connectedDebugAndroidTest` 已通过；当前由 `ciCheck` 和 flavor 专用 connected test 覆盖。Kotlin/Java 均目标 JVM 17，Kotlin 编译烟测通过。
 
 #### P1-T02 Build Type 与 Product Flavor
 
-- [ ] 设计 `standard` 和 `engineering` flavor。
-- [ ] `standard` 不合并 `READ_LOGS`、`WRITE_SECURE_SETTINGS` 等受保护权限。
-- [ ] `engineering` 才展示 Console、Root Log、受保护设置等入口。
-- [ ] Debug 可启用诊断工具；Release 不泄露日志、命令历史和内部路径。
-- [ ] 为应用 ID、名称和版本策略形成明确规则。
+- [x] 设计 `standard` 和 `engineering` flavor。
+- [x] `standard` 不合并 `READ_LOGS`、`WRITE_SECURE_SETTINGS` 等受保护权限。
+- [x] `engineering` 才展示 Console、Root Log、受保护设置等入口。
+- [x] Debug 可启用诊断工具；Release 不泄露日志、命令历史和内部路径。
+- [x] 为应用 ID、名称和版本策略形成明确规则：`standard` 保持 `com.example.platformtool` 和正式版本名，`engineering` 使用 `.engineering` 应用 ID、工程版名称和 `-engineering` 版本名后缀，可并存安装。
+
+验证：`clean ciCheck`、两个 flavor 的 Debug/Release assemble、JVM 测试与 Lint 均通过（各 0 error、203 warning），API 34 上两个 flavor 的 instrumentation 启动测试通过。合并 Manifest 已确认 standard 不含受保护权限及串口、Root Log、Console Activity，engineering 包含对应权限和入口；3000×2000 横屏截图与 UIAutomator 层级确认首页差异、standard 快捷工具不显示触摸调试设置、engineering 显示该设置。
 
 #### P1-T03 质量门禁
 

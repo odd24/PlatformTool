@@ -17,38 +17,51 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, AudioPlayerActivity.class));
         View.OnClickListener openVideo = v ->
                 startActivity(new Intent(this, VideoLibraryActivity.class));
-        View.OnClickListener openSerial = v ->
-                startActivity(new Intent(this, SerialPortActivity.class));
         View.OnClickListener openSensors = v ->
                 startActivity(new Intent(this, SensorActivity.class));
-        View.OnClickListener openLogs = v ->
-                startActivity(new Intent(this, RootLogActivity.class));
         View.OnClickListener openFps = v ->
                 startActivity(new Intent(this, FpsTestActivity.class));
         View.OnClickListener openQuickTools = v ->
                 startActivity(new Intent(this, QuickToolsActivity.class));
         View.OnClickListener openBatteryInfo = v ->
                 startActivity(new Intent(this, BatteryInfoActivity.class));
-        View.OnClickListener openConsole = v ->
-                startActivity(new Intent(this, ConsoleActivity.class));
 
         findViewById(R.id.audioCard).setOnClickListener(openAudio);
         findViewById(R.id.openAudioButton).setOnClickListener(openAudio);
         findViewById(R.id.videoCard).setOnClickListener(openVideo);
         findViewById(R.id.openVideoButton).setOnClickListener(openVideo);
-        findViewById(R.id.serialCard).setOnClickListener(openSerial);
-        findViewById(R.id.openSerialButton).setOnClickListener(openSerial);
         findViewById(R.id.sensorCard).setOnClickListener(openSensors);
         findViewById(R.id.openSensorButton).setOnClickListener(openSensors);
-        findViewById(R.id.logCard).setOnClickListener(openLogs);
-        findViewById(R.id.openLogButton).setOnClickListener(openLogs);
         findViewById(R.id.fpsCard).setOnClickListener(openFps);
         findViewById(R.id.openFpsButton).setOnClickListener(openFps);
         findViewById(R.id.quickToolsCard).setOnClickListener(openQuickTools);
         findViewById(R.id.openQuickToolsButton).setOnClickListener(openQuickTools);
         findViewById(R.id.batteryCard).setOnClickListener(openBatteryInfo);
         findViewById(R.id.openBatteryButton).setOnClickListener(openBatteryInfo);
-        findViewById(R.id.consoleCard).setOnClickListener(openConsole);
-        findViewById(R.id.openConsoleButton).setOnClickListener(openConsole);
+        configureEngineeringCard(
+                R.id.serialCard,
+                R.id.openSerialButton,
+                v -> startActivity(new Intent(this, SerialPortActivity.class)));
+        configureEngineeringCard(
+                R.id.logCard,
+                R.id.openLogButton,
+                v -> startActivity(new Intent(this, RootLogActivity.class)));
+        configureEngineeringCard(
+                R.id.consoleCard,
+                R.id.openConsoleButton,
+                v -> startActivity(new Intent(this, ConsoleActivity.class)));
+    }
+
+    private void configureEngineeringCard(
+            int cardId,
+            int buttonId,
+            View.OnClickListener listener) {
+        View card = findViewById(cardId);
+        if (!BuildConfig.ENGINEERING_FEATURES) {
+            card.setVisibility(View.GONE);
+            return;
+        }
+        card.setOnClickListener(listener);
+        findViewById(buttonId).setOnClickListener(listener);
     }
 }

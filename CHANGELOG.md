@@ -25,6 +25,7 @@
 
 - 距离传感器页面增加完整 `SensorEvent.values`、精度和时间戳 Raw 数据展示。
 - [P0-T04] 新增 JVM 测试骨架与 `MainActivity` 启动 instrumentation test，配置 AndroidX Test Runner，并提供统一的 `ciCheck` 验证命令。
+- [P1-T02] 新增 `standard` 与 `engineering` 产品形态；工程版可与普通版并存安装，并独占串口、Root 日志、Console 和受保护触摸设置入口。
 - [DOC] 新增可执行的重构计划，包含架构边界、阶段任务、验收条件和测试矩阵。
 - [DOC] 新增根目录 `AGENTS.md`，统一后续自动化代理和开发者的实施约束。
 - [DOC] 建立本修改记录及维护规则。
@@ -41,6 +42,7 @@
 - [P0-T02] 新增根目录 Git 忽略规则，并停止跟踪 Gradle 缓存、构建产物、IDE 本地配置和 `local.properties`；本地文件保留不变。
 - [P0-T03] 建立主机基线：Debug APK 可构建，单元测试任务可执行，Lint 为 0 error、201 warning（硬编码文本 129、`SetTextI18n` 31、Overdraw 12、其他 29）；API 34 `rk3588s_u` 真机启动测试通过。
 - [P1-T01] 引入 Gradle Version Catalog 和 Kotlin Android 2.0.21，启用 ViewBinding，并将 Java/Kotlin 编译目标统一为 JVM 17；单模块阶段继续使用根构建脚本承载共享约定。
+- [P1-T02] 构建、安装、真机测试和 ADB Bridge 命令改用明确的 flavor；工程版应用 ID 为 `com.example.platformtool.engineering`，名称和版本名带工程版标识。
 
 ### 修复
 
@@ -52,7 +54,7 @@
 
 ### 安全与权限
 
-- 暂无。
+- [P1-T02] 普通版 Manifest 不再声明 `READ_LOGS`、`WRITE_SECURE_SETTINGS`，并移除串口、Root 日志和 Console Activity；Console 历史及内核/快捷工具桥接文件排除云备份和设备迁移。
 
 ### 已知问题
 

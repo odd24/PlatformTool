@@ -29,11 +29,11 @@ echo [1/5] Waiting for Android device...
 if errorlevel 1 goto :failed
 
 echo [2/5] Granting persistent log access...
-"%ADB%" shell pm grant com.example.platformtool android.permission.READ_LOGS
+"%ADB%" shell pm grant com.example.platformtool.engineering android.permission.READ_LOGS
 if errorlevel 1 (
     echo [WARN] READ_LOGS could not be granted. Root mode may still work.
 ) else (
-    "%ADB%" shell am force-stop com.example.platformtool
+    "%ADB%" shell am force-stop com.example.platformtool.engineering
 )
 
 echo [3/5] Uploading kernel bridge...
