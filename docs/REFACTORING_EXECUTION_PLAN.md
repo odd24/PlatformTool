@@ -12,7 +12,7 @@
 
 ## 1. 文档目的
 
-本文档把 PlatformTool 的重构目标拆成可以逐项实现、验证和回退的任务。后续开发应以本文档作为执行主线，以根目录 `AGENTS.md` 作为工程约束，以根目录 `CHANGELOG.md` 记录实际完成的修改。
+本文档把 PlatformTool 的重构目标拆成可以逐项实现、验证和回退的任务。后续开发应以本文档作为执行主线，以根目录 `AGENTS.md` 作为工程约束，以 `docs/UI_UX_SPEC.md` 作为视觉验收标准，以根目录 `CHANGELOG.md` 记录实际完成的修改。
 
 重构期间必须始终满足以下原则：
 
@@ -155,7 +155,9 @@ ToolDescriptor
 |---|---|---|
 | 开发语言 | 新代码优先 Kotlin，Java/Kotlin 可共存 | 不做一次性语言重写 |
 | 异步模型 | Kotlin Coroutines + Flow/StateFlow | 替换页面私有 Executor/Handler |
-| UI | 现有 XML 保留，引入 ViewBinding 和 ViewModel | Compose 需单独 ADR，不是本轮前置条件 |
+| UI | 新应用壳与迁移页面使用 Compose + Material 3 Expressive；旧 XML 迁移期共存 | 采用 Calm Expressive 方向，不做一次性 UI 重写 |
+| 自适应 | Window Size Class + Material 3 Adaptive + edge-to-edge | 面向手机、平板、折叠屏、多窗口和 Android 15+ 系统栏行为 |
+| 配色 | Material You Dynamic Color + 全新固定回退主题 | 不继承现有 AppCompat 蓝绿主题，状态色保持稳定语义 |
 | 导航 | Navigation Component | 逐页迁移，旧 Activity 可暂时保留 |
 | 结构化数据 | Room | 媒体、历史、阅读进度、收藏等 |
 | 设置 | DataStore | 替代新增的 SharedPreferences 用法 |
@@ -246,7 +248,19 @@ ToolDescriptor
 - [ ] 修复触达页面的硬编码文本、autofill 和控件兼容性问题。
 - [ ] 主题负责窗口背景，避免页面根布局重复绘制不透明背景。
 
-退出条件：两种产品形态都能构建；普通版不包含工程专属权限和入口。
+#### P1-T05 视觉设计系统基线
+
+- [ ] 按 `docs/UI_UX_SPEC.md` 建立浅色/深色语义颜色、排版、间距、圆角、边界和动效 token。
+- [ ] 建立 Compose Material 3 应用壳，迁移期为 XML 页面提供同 token 的 Material 3 Bridge 主题。
+- [ ] Android 12+ 支持 Dynamic Color，旧系统和用户关闭动态色时使用全新 PlatformTool Calm Expressive 回退主题。
+- [ ] 全应用启用 edge-to-edge，统一处理系统栏、IME、显示缺口和手势区域 insets。
+- [ ] 使用 Window Size Class/Material 3 Adaptive 建立手机、宽屏和多窗口布局策略。
+- [ ] 建立 Top App Bar、Tool Card、Status Banner、Metric Card、Empty/Error State 和工程输出区等核心组件。
+- [ ] 首页、一个标准工具页和一个工程密集页完成视觉评审，作为后续迁移基准。
+- [ ] 为核心组件准备浅色、深色、字体放大和宽屏预览/截图。
+- [ ] 停止扩展旧 AppCompat 蓝绿主题；迁移完成页面只能使用 Material 3 语义角色和扩展状态 token。
+
+退出条件：两种产品形态都能构建；普通版不包含工程专属权限和入口；三类参考页面通过 UI/UX 规范验收。
 
 ### P2：核心架构与工具目录
 
@@ -449,7 +463,16 @@ ToolDescriptor
 - [ ] 电池记录 8 小时以上测试。
 - [ ] 大目录、大 PDF、大文本和大 CSV 测试。
 
-退出条件：所有发布门禁通过，旧架构兼容代码已删除，文档与实际结构一致。
+#### P6-T05 全应用视觉一致性验收
+
+- [ ] 按 `docs/UI_UX_SPEC.md` 对全部页面执行 UI 验收清单。
+- [ ] 保留全部页面的浅色/深色基准截图；响应式页面增加手机/宽屏截图。
+- [ ] 串行浏览所有工具，检查独立风格页面、重复入口、冲突文案和错误状态。
+- [ ] 验证 320dp 小屏、600dp+ 宽屏、1.3 倍字体和系统减少动画设置。
+- [ ] 验证 TalkBack/键盘焦点、点击区域、颜色对比以及非颜色状态表达。
+- [ ] 视觉差异必须修复或形成有依据的例外记录，禁止以“功能可用”为由跳过。
+
+退出条件：所有发布门禁和视觉一致性验收通过，旧架构兼容代码已删除，文档与实际结构一致。
 
 ## 6. 测试策略
 
@@ -564,6 +587,7 @@ chore: 仓库维护
 - 相关构建、测试和 Lint 已执行并记录结果。
 - 没有引入不受控线程、进程、文件句柄或无限内存队列。
 - 新增用户可见文本使用资源文件。
+- 页面通过 `docs/UI_UX_SPEC.md` 中与本次变更相关的视觉、响应式和无障碍检查。
 - 权限和受保护能力有降级路径。
 - `CHANGELOG.md`、本执行文档和必要的 README 已同步。
 - 不包含无关改动或构建产物。

@@ -95,6 +95,7 @@ stop-kernel-bridge.*         停止桥接
 ## 重构与开发文档
 
 - [重构实施执行文档](docs/REFACTORING_EXECUTION_PLAN.md)：目标架构、P0～P6 任务、验收条件和测试矩阵。
+- [UI/UX 与视觉一致性规范](docs/UI_UX_SPEC.md)：颜色、排版、间距、组件、页面模板和视觉验收门禁。
 - [修改记录](CHANGELOG.md)：维护 `Unreleased`、数据迁移、安全权限和已知问题。
 - [开发与代理协作规则](AGENTS.md)：后续开发必须遵守的架构、安全、测试和文档约束。
 

@@ -81,12 +81,23 @@ app ───────────→ core:*
 
 ## 8. UI、资源和可访问性
 
+- 所有 UI 变更必须遵守 `docs/UI_UX_SPEC.md`；视觉一致性是 Definition of Done，不是可选美化。
+- 使用集中语义 token 表达颜色、排版、间距、圆角、边界和动效，业务页面不得自行复制常量。
+- 新 UI 不以现有 AppCompat 蓝绿主题为基础；采用 `docs/UI_UX_SPEC.md` 定义的 Calm Expressive、Material You Dynamic Color 和全新回退主题。
+- 新应用壳和迁移页面使用 Compose Material 3；旧 XML 只作为渐进迁移兼容层，并映射同一语义 token。
+- 使用 edge-to-edge、Window Size Class 和 Material 3 Adaptive；不得锁定方向或按设备型号决定布局。
+- 使用稳定 Material 3/Adaptive API；实验性 Expressive 组件必须隔离封装、记录风险并可替换。
+- Success、Warning、Error 和日志级别保持稳定语义，不被动态品牌色替代。
+- 同类页面必须复用统一骨架和组件；不得为单个功能创建独立视觉语言。
+- 同一区域只允许一个 Primary 操作；整卡可点击时不得再增加重复“打开”按钮。
 - 新增用户可见文本必须放入 string resources，不得在 Java/Kotlin/XML 中硬编码。
 - 通用颜色、尺寸和样式应复用资源，避免页面复制。
 - 新页面必须提供加载、空数据、权限不足、不支持和失败状态。
 - 可点击控件应具备合理触摸区域、content description 或可理解文本。
 - 不得用固定横竖屏规避状态恢复问题；确需固定方向时记录原因并验证大屏/多窗口。
 - 避免嵌套同方向滚动容器；长列表使用 RecyclerView 或合适的惰性列表。
+- 每个迁移页面必须检查浅色、深色、320dp 小屏、600dp+ 宽屏和至少 1.3 倍字体。
+- UI 任务交付时提供与风险匹配的截图或视觉检查记录，并与已批准的参考页面比较。
 
 ## 9. 测试要求
 
@@ -115,7 +126,8 @@ app ───────────→ core:*
 1. 更新 `CHANGELOG.md` 的 `Unreleased`。
 2. 更新 `docs/REFACTORING_EXECUTION_PLAN.md` 中对应任务状态。
 3. 若用户使用方式、构建命令、权限授予或桥接流程改变，同步更新 `README.md`。
-4. 若改变模块边界、持久化结构、安全模型或主要技术选型，记录 ADR 或清晰的决策说明。
+4. 若改变视觉 token、核心组件或页面骨架，同步更新 `docs/UI_UX_SPEC.md`。
+5. 若改变模块边界、持久化结构、安全模型或主要技术选型，记录 ADR 或清晰的决策说明。
 
 任务不得仅因为“代码已写完”标记完成；必须满足执行文档中的 Definition of Done。
 

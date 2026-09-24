@@ -29,6 +29,9 @@
 - [DOC] 建立本修改记录及维护规则。
 - [DOC] 在 README 中增加重构计划、修改记录和协作规则入口。
 - [DOC] 规定完成任务必须形成可验证、可回退的原子本地提交，且默认不自动推送或改写历史。
+- [DOC] 新增全应用 UI/UX 视觉规范，定义主题 token、页面骨架、组件、响应式布局、无障碍和视觉评审门禁。
+- [DOC] 在重构计划中增加 P1-T05 设计系统基线和 P6-T05 全应用视觉一致性验收。
+- [DOC] UI 目标调整为全新的 Calm Expressive：Compose Material 3 Expressive、Material You 动态配色、edge-to-edge 和 Material 3 Adaptive；现有 AppCompat 蓝绿主题不再作为设计基础。
 
 ### 修改
 
