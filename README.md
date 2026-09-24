@@ -92,6 +92,12 @@ start-kernel-bridge.*        启动内核日志与快捷工具桥接
 stop-kernel-bridge.*         停止桥接
 ```
 
+## 重构与开发文档
+
+- [重构实施执行文档](docs/REFACTORING_EXECUTION_PLAN.md)：目标架构、P0～P6 任务、验收条件和测试矩阵。
+- [修改记录](CHANGELOG.md)：维护 `Unreleased`、数据迁移、安全权限和已知问题。
+- [开发与代理协作规则](AGENTS.md)：后续开发必须遵守的架构、安全、测试和文档约束。
+
 ## 注意
 
 本项目主要用于工程调试和硬件验证。不同 Android 厂商对系统权限、串口节点、Root 命令及日志访问的限制不同，具体可用功能以目标设备为准。
