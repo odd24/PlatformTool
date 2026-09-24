@@ -55,7 +55,7 @@
 
 ### 已知问题
 
-- P0-T03 的 API 23～28 真机冒烟测试尚未执行。
+- P0-T03 的 API 23～28 真机冒烟测试尚未执行；2026-09-24 复核时仅有 API 34 `rk3588s_u` 在线，Android SDK 未安装 API 23～28 AVD/system image，任务保持阻塞且不得标记完成。
 - 当前 Windows 主机的 Java NIO 在默认临时目录创建 AF_UNIX pipe 时返回 `Invalid argument`；Gradle 基线命令需为进程设置 `JAVA_TOOL_OPTIONS=-Djdk.net.unixdomain.tmpdir=C:\Windows\Temp`。
 
 ## 发布模板

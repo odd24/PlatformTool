@@ -196,13 +196,13 @@ ToolDescriptor
 
 验收：执行一次构建后，`git status` 不因构建缓存产生大量改动。
 
-#### P0-T03 生成正式基线
+#### P0-T03 生成正式基线 `[!]`
 
 - [x] 执行 `./gradlew assembleDebug`。
 - [x] 执行 `./gradlew testDebugUnitTest`。
 - [x] 执行 `./gradlew lintDebug`。
 - [x] 把失败项和 Lint 分类记录到 `CHANGELOG.md` 或独立 issue。
-- [ ] 在至少一台 API 23～28 和一台 API 33+ 设备执行冒烟测试（API 34 真机已通过启动测试；API 23～28 待验证）。
+- [!] 在至少一台 API 23～28 和一台 API 33+ 设备执行冒烟测试（API 34 真机已通过启动测试；2026-09-24 审计时仅连接该设备，本机也没有 API 23～28 AVD/system image，旧系统设备验证待具备测试设备后回补）。
 
 验收：能够从干净检出构建 Debug APK，已知失败均被记录。
 
