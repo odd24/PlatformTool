@@ -220,11 +220,13 @@ ToolDescriptor
 
 #### P1-T01 Gradle 约定
 
-- [ ] 引入 `gradle/libs.versions.toml`。
-- [ ] 增加 Kotlin Android 插件，新代码可使用 Kotlin。
-- [ ] 启用 ViewBinding。
-- [ ] 把 Java/Kotlin 编译目标统一为同一 JVM 版本。
-- [ ] 建立可复用的 Android/Kotlin 编译约定；项目规模不足时可暂留根脚本，避免过度工程化。
+- [x] 引入 `gradle/libs.versions.toml`。
+- [x] 增加 Kotlin Android 插件，新代码可使用 Kotlin。
+- [x] 启用 ViewBinding。
+- [x] 把 Java/Kotlin 编译目标统一为同一 JVM 版本。
+- [x] 建立可复用的 Android/Kotlin 编译约定；当前仅有 `:app`，约定集中在版本目录和根脚本，待 P6 多模块拆分时再提取 convention plugin。
+
+验证：`clean assembleDebug testDebugUnitTest lintDebug`、`ciCheck` 和 API 34 `connectedDebugAndroidTest` 通过；Kotlin/Java 均目标 JVM 17，Kotlin 编译烟测通过，Lint 为 0 error、204 warning（未新增业务代码告警）。
 
 #### P1-T02 Build Type 与 Product Flavor
 

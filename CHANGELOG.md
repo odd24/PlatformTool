@@ -40,6 +40,7 @@
 - [P0-T01] 已确认并保护重构前的工作区改动，版本号与距离传感器 Raw 数据展示均已建立本地提交回退点。
 - [P0-T02] 新增根目录 Git 忽略规则，并停止跟踪 Gradle 缓存、构建产物、IDE 本地配置和 `local.properties`；本地文件保留不变。
 - [P0-T03] 建立主机基线：Debug APK 可构建，单元测试任务可执行，Lint 为 0 error、201 warning（硬编码文本 129、`SetTextI18n` 31、Overdraw 12、其他 29）；API 34 `rk3588s_u` 真机启动测试通过。
+- [P1-T01] 引入 Gradle Version Catalog 和 Kotlin Android 2.0.21，启用 ViewBinding，并将 Java/Kotlin 编译目标统一为 JVM 17；单模块阶段继续使用根构建脚本承载共享约定。
 
 ### 修复
 

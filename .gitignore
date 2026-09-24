@@ -1,5 +1,6 @@
 # Gradle caches and generated build outputs
 .gradle/
+.kotlin/
 **/build/
 
 # Android Studio and local machine configuration
