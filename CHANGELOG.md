@@ -26,6 +26,7 @@
 - 距离传感器页面增加完整 `SensorEvent.values`、精度和时间戳 Raw 数据展示。
 - [P0-T04] 新增 JVM 测试骨架与 `MainActivity` 启动 instrumentation test，配置 AndroidX Test Runner，并提供统一的 `ciCheck` 验证命令。
 - [P1-T02] 新增 `standard` 与 `engineering` 产品形态；工程版可与普通版并存安装，并独占串口、Root 日志、Console 和受保护触摸设置入口。
+- [P1-T03] 新增 GitHub Actions 质量门禁，统一构建、测试和 Lint 两种产品形态；Debug 构建启用 StrictMode 与 LeakCanary 2.14，发布构建不包含泄漏检测依赖。
 - [DOC] 新增可执行的重构计划，包含架构边界、阶段任务、验收条件和测试矩阵。
 - [DOC] 新增根目录 `AGENTS.md`，统一后续自动化代理和开发者的实施约束。
 - [DOC] 建立本修改记录及维护规则。

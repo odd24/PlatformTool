@@ -52,6 +52,12 @@ android {
         buildConfig = true
         viewBinding = true
     }
+
+    lint {
+        abortOnError = true
+        checkReleaseBuilds = true
+        warningsAsErrors = false
+    }
 }
 
 kotlin {
@@ -72,4 +78,5 @@ dependencies {
     androidTestImplementation(libs.androidx.test.runner)
     androidTestImplementation(libs.androidx.test.rules)
     androidTestImplementation(libs.androidx.test.ext.junit)
+    debugImplementation(libs.leakcanary.android)
 }

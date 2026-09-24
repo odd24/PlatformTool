@@ -236,15 +236,17 @@ ToolDescriptor
 - [x] Debug 可启用诊断工具；Release 不泄露日志、命令历史和内部路径。
 - [x] 为应用 ID、名称和版本策略形成明确规则：`standard` 保持 `com.example.platformtool` 和正式版本名，`engineering` 使用 `.engineering` 应用 ID、工程版名称和 `-engineering` 版本名后缀，可并存安装。
 
-验证：`clean ciCheck`、两个 flavor 的 Debug/Release assemble、JVM 测试与 Lint 均通过（各 0 error、203 warning），API 34 上两个 flavor 的 instrumentation 启动测试通过。合并 Manifest 已确认 standard 不含受保护权限及串口、Root Log、Console Activity，engineering 包含对应权限和入口；3000×2000 横屏截图与 UIAutomator 层级确认首页差异、standard 快捷工具不显示触摸调试设置、engineering 显示该设置。
+验证：`clean ciCheck`、两个 flavor 的 Debug/Release assemble、JVM 测试与 Lint 均通过（各 0 error、202 warning），API 34 上两个 flavor 的 instrumentation 启动测试通过。合并 Manifest 已确认 standard 不含受保护权限及串口、Root Log、Console Activity，engineering 包含对应权限和入口；3000×2000 横屏截图与 UIAutomator 层级确认首页差异、standard 快捷工具不显示触摸调试设置、engineering 显示该设置。
 
 #### P1-T03 质量门禁
 
-- [ ] CI 执行 assemble、unit test、lint。
-- [ ] 新增代码不允许引入新的 Lint error。
-- [ ] Lint warning 按“本次修改相关优先”逐步归零，禁止一次性无审查 suppress。
-- [ ] Debug 开启 StrictMode，检测主线程磁盘/网络访问。
-- [ ] 引入内存泄漏检测，仅限 Debug。
+- [x] CI 执行 assemble、unit test、lint。
+- [x] 新增代码不允许引入新的 Lint error。
+- [x] Lint warning 按“本次修改相关优先”逐步归零，禁止一次性无审查 suppress。
+- [x] Debug 开启 StrictMode，检测主线程磁盘/网络访问。
+- [x] 引入内存泄漏检测，仅限 Debug。
+
+验证：GitHub Actions 使用 JDK 17 调用统一 `ciCheck`；在不 push 的约束下，本机从 clean 状态执行同一入口并同时构建两个 Release variant，全部成功。两个 flavor 各 3 个 JVM 测试、各 1 个 API 34 instrumentation 测试通过，Lint 均为 0 error、202 warning，未新增 suppress。依赖解析确认 LeakCanary 2.14 仅存在于 Debug runtime classpath，Release 无匹配依赖；API 34 冷启动日志确认 LeakCanary 就绪且 StrictMode 已报告主线程磁盘读取。
 
 #### P1-T04 资源和国际化基础
 
