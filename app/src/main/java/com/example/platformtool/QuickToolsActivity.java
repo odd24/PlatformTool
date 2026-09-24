@@ -52,7 +52,7 @@ public class QuickToolsActivity extends AppCompatActivity {
                     setTorch(true);
                 } else if (!granted) {
                     setChecked(flashlightSwitch, false);
-                    showStatus("未获得相机权限，无法打开手电筒。", true);
+                    showStatus(getString(R.string.quick_tools_camera_permission_denied), true);
                 }
                 pendingTorchEnable = false;
             });
@@ -77,7 +77,7 @@ public class QuickToolsActivity extends AppCompatActivity {
         flashCameraId = findFlashCameraId();
         if (flashCameraId == null) {
             flashlightSwitch.setEnabled(false);
-            flashlightSwitch.setText("手电筒（设备未检测到闪光灯）");
+            flashlightSwitch.setText(R.string.quick_tools_flashlight_unavailable);
         }
 
         if (BuildConfig.ENGINEERING_FEATURES) {
@@ -123,19 +123,19 @@ public class QuickToolsActivity extends AppCompatActivity {
 
     private void changeTouchDebugSetting(boolean enabled) {
         showTouchesSwitch.setEnabled(false);
-        showStatus("正在修改触摸调试设置…", false);
+        showStatus(getString(R.string.quick_tools_touch_updating), false);
         commandExecutor.execute(() -> {
             boolean success = writeTouchDebugSettings(enabled);
             runOnUiThread(() -> {
                 showTouchesSwitch.setEnabled(true);
                 if (success) {
                     setChecked(showTouchesSwitch, enabled);
-                    showStatus(enabled
-                            ? "已显示触摸点、指针与坐标。"
-                            : "已关闭触摸点、指针与坐标。", false);
+                    showStatus(getString(enabled
+                            ? R.string.quick_tools_touch_enabled
+                            : R.string.quick_tools_touch_disabled), false);
                 } else {
                     refreshProtectedSwitches();
-                    showStatus("修改失败。请授予 Root，或重新运行 start-kernel-bridge.bat。", true);
+                    showStatus(getString(R.string.quick_tools_touch_failed), true);
                 }
             });
         });
@@ -254,11 +254,13 @@ public class QuickToolsActivity extends AppCompatActivity {
             cameraManager.setTorchMode(flashCameraId, enabled);
             torchEnabled = enabled;
             setChecked(flashlightSwitch, enabled);
-            showStatus(enabled ? "手电筒已打开。" : "手电筒已关闭。", false);
+            showStatus(getString(enabled
+                    ? R.string.quick_tools_flashlight_enabled
+                    : R.string.quick_tools_flashlight_disabled), false);
         } catch (CameraAccessException | SecurityException | IllegalArgumentException exception) {
             torchEnabled = false;
             setChecked(flashlightSwitch, false);
-            showStatus("手电筒操作失败，摄像头可能正被其他应用占用。", true);
+            showStatus(getString(R.string.quick_tools_flashlight_failed), true);
         }
     }
 
@@ -267,8 +269,8 @@ public class QuickToolsActivity extends AppCompatActivity {
         if (vibrator == null || !vibrator.hasVibrator()) {
             setChecked(vibrationSwitch, false);
             vibrationSwitch.setEnabled(false);
-            vibrationSwitch.setText("持续震动（设备没有振动器）");
-            showStatus("设备未检测到振动器。", true);
+            vibrationSwitch.setText(R.string.quick_tools_vibrator_unavailable_label);
+            showStatus(getString(R.string.quick_tools_vibrator_unavailable), true);
             return;
         }
         if (enabled) {
@@ -278,10 +280,10 @@ public class QuickToolsActivity extends AppCompatActivity {
             } else {
                 vibrator.vibrate(pattern, 0);
             }
-            showStatus("持续震动已打开。", false);
+            showStatus(getString(R.string.quick_tools_vibration_enabled), false);
         } else {
             vibrator.cancel();
-            showStatus("持续震动已关闭。", false);
+            showStatus(getString(R.string.quick_tools_vibration_disabled), false);
         }
     }
 

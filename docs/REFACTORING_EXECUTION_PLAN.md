@@ -250,9 +250,11 @@ ToolDescriptor
 
 #### P1-T04 资源和国际化基础
 
-- [ ] 新增或修改的用户可见文本全部进入 string resources。
-- [ ] 修复触达页面的硬编码文本、autofill 和控件兼容性问题。
-- [ ] 主题负责窗口背景，避免页面根布局重复绘制不透明背景。
+- [x] 新增或修改的用户可见文本全部进入 string resources。
+- [x] 修复触达页面的硬编码文本、autofill 和控件兼容性问题。
+- [x] 主题负责窗口背景，避免页面根布局重复绘制不透明背景。
+
+验证：首页和快捷工具页的 XML/Java 用户文案已迁入 string resources，Lint 对两个页面及主题均无剩余告警；两个 flavor 的总 warning 从 202 降至 166（HardcodedText 127→93、Overdraw 12→10），未新增 suppress。`ciCheck`、两个 Release assemble 和 API 34 上两个 flavor 的 instrumentation 启动测试通过；3000×2000 横屏截图与 UIAutomator 层级确认文案、普通版能力隐藏及页面背景无视觉回归。
 
 #### P1-T05 视觉设计系统基线
 

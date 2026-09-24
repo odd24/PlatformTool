@@ -44,6 +44,7 @@
 - [P0-T03] 建立主机基线：Debug APK 可构建，单元测试任务可执行，Lint 为 0 error、201 warning（硬编码文本 129、`SetTextI18n` 31、Overdraw 12、其他 29）；API 34 `rk3588s_u` 真机启动测试通过。
 - [P1-T01] 引入 Gradle Version Catalog 和 Kotlin Android 2.0.21，启用 ViewBinding，并将 Java/Kotlin 编译目标统一为 JVM 17；单模块阶段继续使用根构建脚本承载共享约定。
 - [P1-T02] 构建、安装、真机测试和 ADB Bridge 命令改用明确的 flavor；工程版应用 ID 为 `com.example.platformtool.engineering`，名称和版本名带工程版标识。
+- [P1-T04] 首页与快捷工具页的用户文案迁入 string resources，主题统一提供窗口背景并移除页面根布局重复背景；相关 Lint warning 减少 36 个。
 
 ### 修复
 

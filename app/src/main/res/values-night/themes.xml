@@ -5,6 +5,7 @@
         <item name="colorPrimaryDark">@color/blue_800</item>
         <item name="colorAccent">@color/green_700</item>
         <item name="android:fontFamily">sans</item>
+        <item name="android:windowBackground">@color/surface</item>
         <item name="android:navigationBarColor">@color/card</item>
         <item name="android:windowActionModeOverlay">true</item>
     </style>
