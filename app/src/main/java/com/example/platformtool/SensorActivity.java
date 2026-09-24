@@ -35,6 +35,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
     private final SparseBooleanArray registeredSensors = new SparseBooleanArray();
     private final SparseLongArray lastUpdates = new SparseLongArray();
     private TextView statusView;
+    private TextView proximityRawView;
     private GravityBallView gravityBallView;
     private int availableSensorCount;
     private boolean activityResumed;
@@ -56,6 +57,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
     private void bindViews() {
         statusView = findViewById(R.id.sensorStatusText);
         gravityBallView = findViewById(R.id.gravityBallView);
+        proximityRawView = findViewById(R.id.proximityRawValue);
         valueViews.put(Sensor.TYPE_ACCELEROMETER, findViewById(R.id.accelerometerValue));
         valueViews.put(Sensor.TYPE_GYROSCOPE, findViewById(R.id.gyroscopeValue));
         valueViews.put(Sensor.TYPE_MAGNETIC_FIELD, findViewById(R.id.magneticValue));
@@ -84,6 +86,9 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
             Switch sensorSwitch = switches.get(type);
             if (sensor == null) {
                 valueView.setText("设备未配备此传感器");
+                if (type == Sensor.TYPE_PROXIMITY) {
+                    proximityRawView.setText("Raw：不可用");
+                }
                 infoView.setText("状态：不可用");
                 sensorSwitch.setChecked(false);
                 sensorSwitch.setEnabled(false);
@@ -92,6 +97,9 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
             availableSensorCount++;
             sensors.put(type, sensor);
             valueView.setText("数据上报已关闭");
+            if (type == Sensor.TYPE_PROXIMITY) {
+                proximityRawView.setText("Raw 数据上报已关闭");
+            }
             infoView.setText(String.format(Locale.getDefault(),
                     "%s · %s\n量程 %.3f · 分辨率 %.6f · 功耗 %.2f mA",
                     sensor.getName(), sensor.getVendor(), sensor.getMaximumRange(),
@@ -112,11 +120,15 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         if (sensor == null) return;
         if (enabled) {
             valueViews.get(type).setText("等待数据…");
+            if (type == Sensor.TYPE_PROXIMITY) proximityRawView.setText("等待 Raw 数据…");
             if (type == Sensor.TYPE_ACCELEROMETER) gravityBallView.setSensorEnabled(true);
             if (activityResumed) registerSensor(type);
         } else {
             unregisterSensor(type);
             valueViews.get(type).setText("数据上报已关闭");
+            if (type == Sensor.TYPE_PROXIMITY) {
+                proximityRawView.setText("Raw 数据上报已关闭");
+            }
             if (type == Sensor.TYPE_ACCELEROMETER) gravityBallView.setSensorEnabled(false);
         }
         updateStatus();
@@ -129,7 +141,10 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         lastUpdates.delete(type);
         boolean success = sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_GAME);
         registeredSensors.put(type, success);
-        if (!success) valueViews.get(type).setText("传感器注册失败");
+        if (!success) {
+            valueViews.get(type).setText("传感器注册失败");
+            if (type == Sensor.TYPE_PROXIMITY) proximityRawView.setText("Raw：注册失败");
+        }
     }
 
     private void unregisterSensor(int type) {
@@ -165,6 +180,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
             Switch sensorSwitch = switches.get(type);
             if (sensorSwitch != null && sensorSwitch.isChecked()) {
                 valueViews.get(type).setText("等待数据…");
+                if (type == Sensor.TYPE_PROXIMITY) proximityRawView.setText("等待 Raw 数据…");
                 if (type == Sensor.TYPE_ACCELEROMETER) gravityBallView.setSensorEnabled(true);
                 registerSensor(type);
             }
@@ -204,9 +220,16 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
                 view.setText(String.format(Locale.getDefault(), "照度  %.3f lx", event.values[0]));
                 break;
             case Sensor.TYPE_PROXIMITY:
+                if (event.values.length == 0) {
+                    view.setText("数据格式异常：没有 values[0]");
+                    proximityRawView.setText("Raw values = []");
+                    break;
+                }
                 Sensor proximity = sensors.get(Sensor.TYPE_PROXIMITY);
                 String state = event.values[0] < proximity.getMaximumRange() ? "靠近" : "远离";
-                view.setText(String.format(Locale.getDefault(), "距离  %.3f cm  (%s)", event.values[0], state));
+                view.setText(String.format(Locale.getDefault(),
+                        "状态  %s\n距离值  %.6f cm", state, event.values[0]));
+                proximityRawView.setText(formatProximityRaw(event));
                 break;
             default:
                 break;
@@ -218,6 +241,17 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         return String.format(Locale.getDefault(),
                 "X  %9.4f %s\nY  %9.4f %s\nZ  %9.4f %s",
                 values[0], unit, values[1], unit, values[2], unit);
+    }
+
+    private static String formatProximityRaw(SensorEvent event) {
+        StringBuilder builder = new StringBuilder("SensorEvent Raw");
+        for (int index = 0; index < event.values.length; index++) {
+            builder.append("\nvalues[").append(index).append("] = ")
+                    .append(Float.toString(event.values[index]));
+        }
+        builder.append("\naccuracy = ").append(event.accuracy)
+                .append("\ntimestamp = ").append(event.timestamp).append(" ns");
+        return builder.toString();
     }
 
     private void updateGravityBall(float[] values) {

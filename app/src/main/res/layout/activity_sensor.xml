@@ -77,6 +77,25 @@
                 <Switch android:id="@+id/proximitySwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:showText="true" android:textOff="关闭" android:textOn="开启" />
             </LinearLayout>
             <TextView android:id="@+id/proximityValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/value_background" android:fontFamily="monospace" android:text="等待数据" android:textColor="@color/text_primary" android:textIsSelectable="true" />
+            <TextView
+                android:id="@+id/proximityRawValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/value_background"
+                android:fontFamily="monospace"
+                android:padding="10dp"
+                android:text="Raw 数据上报已关闭"
+                android:textColor="@color/text_primary"
+                android:textIsSelectable="true"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Raw 为 Android SensorEvent 原始上报值；驱动内部 ADC 值需厂商 HAL 提供。"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
             <TextView android:id="@+id/proximityInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/text_secondary" android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
