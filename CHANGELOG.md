@@ -24,6 +24,7 @@
 ### 新增
 
 - 距离传感器页面增加完整 `SensorEvent.values`、精度和时间戳 Raw 数据展示。
+- [P0-T04] 新增 JVM 测试骨架与 `MainActivity` 启动 instrumentation test，配置 AndroidX Test Runner，并提供统一的 `ciCheck` 验证命令。
 - [DOC] 新增可执行的重构计划，包含架构边界、阶段任务、验收条件和测试矩阵。
 - [DOC] 新增根目录 `AGENTS.md`，统一后续自动化代理和开发者的实施约束。
 - [DOC] 建立本修改记录及维护规则。
@@ -38,6 +39,7 @@
 - 应用版本由 `1.31`（32）更新为 `1.32`（33）。
 - [P0-T01] 已确认并保护重构前的工作区改动，版本号与距离传感器 Raw 数据展示均已建立本地提交回退点。
 - [P0-T02] 新增根目录 Git 忽略规则，并停止跟踪 Gradle 缓存、构建产物、IDE 本地配置和 `local.properties`；本地文件保留不变。
+- [P0-T03] 建立主机基线：Debug APK 可构建，单元测试任务可执行，Lint 为 0 error、201 warning（硬编码文本 129、`SetTextI18n` 31、Overdraw 12、其他 29）；API 34 `rk3588s_u` 真机启动测试通过。
 
 ### 修复
 
@@ -53,8 +55,8 @@
 
 ### 已知问题
 
-- P0-T03 尚未执行，当前构建、测试和 Lint 基线仍需重新确认。
-- 当前主机的 Gradle 验证在编译前因无法建立 loopback 连接而中止，需要在网络栈正常的环境重新执行构建和测试。
+- P0-T03 的 API 23～28 真机冒烟测试尚未执行。
+- 当前 Windows 主机的 Java NIO 在默认临时目录创建 AF_UNIX pipe 时返回 `Invalid argument`；Gradle 基线命令需为进程设置 `JAVA_TOOL_OPTIONS=-Djdk.net.unixdomain.tmpdir=C:\Windows\Temp`。
 
 ## 发布模板
 

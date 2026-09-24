@@ -198,19 +198,19 @@ ToolDescriptor
 
 #### P0-T03 生成正式基线
 
-- [ ] 执行 `./gradlew assembleDebug`。
-- [ ] 执行 `./gradlew testDebugUnitTest`。
-- [ ] 执行 `./gradlew lintDebug`。
-- [ ] 把失败项和 Lint 分类记录到 `CHANGELOG.md` 或独立 issue。
-- [ ] 在至少一台 API 23～28 和一台 API 33+ 设备执行冒烟测试。
+- [x] 执行 `./gradlew assembleDebug`。
+- [x] 执行 `./gradlew testDebugUnitTest`。
+- [x] 执行 `./gradlew lintDebug`。
+- [x] 把失败项和 Lint 分类记录到 `CHANGELOG.md` 或独立 issue。
+- [ ] 在至少一台 API 23～28 和一台 API 33+ 设备执行冒烟测试（API 34 真机已通过启动测试；API 23～28 待验证）。
 
 验收：能够从干净检出构建 Debug APK，已知失败均被记录。
 
 #### P0-T04 建立测试骨架
 
-- [ ] 建立 `app/src/test` 和 `app/src/androidTest`。
-- [ ] 添加至少一个 JVM smoke test 和一个启动 instrumentation test。
-- [ ] 为 CI 预留统一命令，不依赖 Android Studio 手工操作。
+- [x] 建立 `app/src/test` 和 `app/src/androidTest`。
+- [x] 添加至少一个 JVM smoke test 和一个启动 instrumentation test。
+- [x] 为 CI 预留统一命令，不依赖 Android Studio 手工操作。
 
 退出条件：P0 全部任务完成，且没有改变现有业务行为。
 

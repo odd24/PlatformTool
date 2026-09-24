@@ -30,6 +30,14 @@ PlatformTool（平台硬件工具）是一款面向 Android 工程设备、系�
 adb install -r .\app\build\outputs\apk\debug\app-debug.apk
 ```
 
+提交前可用不依赖 Android Studio 的统一命令执行 Debug 构建、JVM 测试、Lint 和 instrumentation test APK 编译：
+
+```powershell
+.\gradlew.bat ciCheck
+```
+
+连接 Android 设备后，使用 `.\gradlew.bat connectedDebugAndroidTest` 执行真机 instrumentation test。
+
 默认应用 ID：
 
 ```text
