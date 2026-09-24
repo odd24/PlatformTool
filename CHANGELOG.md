@@ -47,6 +47,7 @@
 - [P1-T04] 首页与快捷工具页的用户文案迁入 string resources，主题统一提供窗口背景并移除页面根布局重复背景；相关 Lint warning 减少 36 个。
 - [P1-T05] 开始建立 Calm Expressive 设计系统：加入与现有工具链兼容的 Compose Material 3/Adaptive 基线、浅深色语义 token、XML Material 3 Bridge 主题、响应式策略和核心状态/数据/工程输出组件预览。
 - [P1-T05] 首页迁移为 Compose Material 3 响应式工具网格，移除整卡点击之外的重复按钮，新增工具搜索及可持久化的动态/固定配色选择；普通版继续隐藏串口、Root 日志和 Console。
+- [P1-T05] XML 页面统一接入 Material 3 edge-to-edge 壳层并处理系统栏、显示缺口与 IME；快捷工具和 Console 分别建立标准工具页与工程密集页参考布局，宽屏下采用限制内容宽度或控制/输出双栏结构。
 
 ### 修复
 

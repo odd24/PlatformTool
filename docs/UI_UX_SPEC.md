@@ -173,6 +173,8 @@ inverseSurface / inverseOnSurface / inversePrimary
 - 固定回退主题以 `#5B5BD6` 建议种子生成并经对比度调整，实际 primary 为浅色 `#4F4CB7`、深色 `#C4C0FF`；Success、Warning、Info 使用独立扩展角色，不随动态品牌色变化。
 - 响应式断点固定为 Compact `<600dp`、Medium `600～839dp`、Expanded `≥840dp`，通过 Material 3 Adaptive 的窗口信息触发重组，不依据设备型号或方向。
 - 稳定动效时长为 150ms、200ms、250ms；XML 和 Compose 均从集中 token 读取。
+- 迁移期 XML Activity 统一通过 `PlatformActivity` 提供 Material 3 Top App Bar 和 edge-to-edge inset 壳层；页面只负责内容布局，不重复消费系统栏、显示缺口或 IME inset。全屏视频作为沉浸式例外，必须保留标准手势恢复系统栏和显式退出路径。
+- P1 视觉参考页固定为 Compose 首页、XML 快捷工具页和 XML Console：分别覆盖工具发现、标准控制及工程控制/输出场景，后续页面迁移应复用其 token、状态容器和 Compact/Expanded 重组方式。
 
 ## 4. 页面骨架
 

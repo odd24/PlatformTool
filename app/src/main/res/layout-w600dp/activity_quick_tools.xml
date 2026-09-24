@@ -6,73 +6,58 @@
     android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="720dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="@dimen/pt_space_md">
+        android:padding="@dimen/pt_space_lg">
 
         <TextView
             android:id="@+id/quickToolsStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:background="@drawable/status_info_background"
             android:text="@string/quick_tools_engineering_status"
-            android:textColor="@color/pt_on_info_container"
-            android:textSize="14sp" />
+            android:textColor="@color/pt_on_info_container" android:textSize="14sp" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/showTouchesSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/pt_space_md"
-            android:background="@drawable/tool_control_background"
-            android:minHeight="72dp"
+            android:background="@drawable/tool_control_background" android:minHeight="72dp"
             android:text="@string/quick_tools_touch_debug"
-            android:textColor="@color/pt_on_surface"
-            android:textSize="16sp" />
+            android:textColor="@color/pt_on_surface" android:textSize="16sp" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/flashlightSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/pt_space_sm"
-            android:background="@drawable/tool_control_background"
-            android:minHeight="72dp"
+            android:background="@drawable/tool_control_background" android:minHeight="72dp"
             android:text="@string/quick_tools_flashlight"
-            android:textColor="@color/pt_on_surface"
-            android:textSize="16sp" />
+            android:textColor="@color/pt_on_surface" android:textSize="16sp" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/vibrationSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/pt_space_sm"
-            android:background="@drawable/tool_control_background"
-            android:minHeight="72dp"
+            android:background="@drawable/tool_control_background" android:minHeight="72dp"
             android:text="@string/quick_tools_vibration"
-            android:textColor="@color/pt_on_surface"
-            android:textSize="16sp" />
+            android:textColor="@color/pt_on_surface" android:textSize="16sp" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/keepScreenOnSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/pt_space_sm"
-            android:background="@drawable/tool_control_background"
-            android:minHeight="72dp"
+            android:background="@drawable/tool_control_background" android:minHeight="72dp"
             android:text="@string/quick_tools_keep_screen_on"
-            android:textColor="@color/pt_on_surface"
-            android:textSize="16sp" />
+            android:textColor="@color/pt_on_surface" android:textSize="16sp" />
 
         <TextView
             android:id="@+id/quickToolsEngineeringHelp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/pt_space_md"
             android:background="@drawable/status_warning_background"
             android:text="@string/quick_tools_engineering_help"
             android:textColor="@color/pt_on_warning_container"
-            android:textIsSelectable="true"
-            android:textSize="13sp" />
+            android:textIsSelectable="true" android:textSize="13sp" />
     </LinearLayout>
 </ScrollView>

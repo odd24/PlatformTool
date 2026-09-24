@@ -1,7 +1,6 @@
 package com.example.platformtool
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -39,9 +38,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.datastore.preferences.core.booleanPreferencesKey
-import androidx.datastore.preferences.core.edit
-import androidx.datastore.preferences.preferencesDataStore
 import com.example.platformtool.core.ui.AppTopBar
 import com.example.platformtool.core.ui.EmptyState
 import com.example.platformtool.core.ui.PlatformTheme
@@ -51,42 +47,30 @@ import com.example.platformtool.core.ui.StatusBanner
 import com.example.platformtool.core.ui.StatusTone
 import com.example.platformtool.core.ui.ToolCard
 import com.example.platformtool.core.ui.currentPlatformWindowStrategy
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-private val Context.themeDataStore by preferencesDataStore(name = "theme_settings")
-
 class MainActivity : ComponentActivity() {
-    private val themePreferences by lazy { ThemePreferences(applicationContext) }
+    private val themeSettings by lazy {
+        (application as PlatformToolApplication).themeSettings
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val useDynamicColor by themePreferences.useDynamicColor.collectAsState(initial = true)
+            val useDynamicColor by themeSettings.useDynamicColor.collectAsState()
             val scope = rememberCoroutineScope()
             PlatformTheme(useDynamicColor = useDynamicColor) {
                 HomeScreen(
                     engineeringFeatures = BuildConfig.ENGINEERING_FEATURES,
                     useDynamicColor = useDynamicColor,
                     onUseDynamicColorChanged = { enabled ->
-                        scope.launch { themePreferences.setUseDynamicColor(enabled) }
+                        scope.launch { themeSettings.setUseDynamicColor(enabled) }
                     },
                     onOpenTool = { destination -> startActivity(Intent(this, destination)) },
                 )
             }
         }
-    }
-}
-
-private class ThemePreferences(private val context: Context) {
-    private val dynamicColorKey = booleanPreferencesKey("use_dynamic_color")
-    val useDynamicColor = context.themeDataStore.data.map { preferences ->
-        preferences[dynamicColorKey] ?: true
-    }
-
-    suspend fun setUseDynamicColor(enabled: Boolean) {
-        context.themeDataStore.edit { preferences -> preferences[dynamicColorKey] = enabled }
     }
 }
 

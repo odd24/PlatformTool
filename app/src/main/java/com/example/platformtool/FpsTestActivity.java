@@ -8,11 +8,10 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class FpsTestActivity extends AppCompatActivity implements Choreographer.FrameCallback {
+public class FpsTestActivity extends PlatformActivity implements Choreographer.FrameCallback {
     private static final long SETTLE_DELAY_MS = 1_000L;
     private static final long MEASUREMENT_DURATION_NS = 3_000_000_000L;
     private static final long LIVE_UPDATE_INTERVAL_NS = 1_000_000_000L;

@@ -256,21 +256,23 @@ ToolDescriptor
 
 验证：首页和快捷工具页的 XML/Java 用户文案已迁入 string resources，Lint 对两个页面及主题均无剩余告警；两个 flavor 的总 warning 从 202 降至 166（HardcodedText 127→93、Overdraw 12→10），未新增 suppress。`ciCheck`、两个 Release assemble 和 API 34 上两个 flavor 的 instrumentation 启动测试通过；3000×2000 横屏截图与 UIAutomator 层级确认文案、普通版能力隐藏及页面背景无视觉回归。
 
-#### P1-T05 视觉设计系统基线 `[~]`
+#### P1-T05 视觉设计系统基线
 
 - [x] 按 `docs/UI_UX_SPEC.md` 建立浅色/深色语义颜色、排版、间距、圆角、边界和动效 token。
 - [x] 建立 Compose Material 3 应用壳，迁移期为 XML 页面提供同 token 的 Material 3 Bridge 主题。
 - [x] Android 12+ 支持 Dynamic Color，旧系统和用户关闭动态色时使用全新 PlatformTool Calm Expressive 回退主题。
-- [ ] 全应用启用 edge-to-edge，统一处理系统栏、IME、显示缺口和手势区域 insets。
+- [x] 全应用启用 edge-to-edge，统一处理系统栏、IME、显示缺口和手势区域 insets。
 - [x] 使用 Window Size Class/Material 3 Adaptive 建立手机、宽屏和多窗口布局策略。
 - [x] 建立 Top App Bar、Tool Card、Status Banner、Metric Card、Empty/Error State 和工程输出区等核心组件。
-- [ ] 首页、一个标准工具页和一个工程密集页完成视觉评审，作为后续迁移基准。
+- [x] 首页、一个标准工具页和一个工程密集页完成视觉评审，作为后续迁移基准。
 - [x] 为核心组件准备浅色、深色、字体放大和宽屏预览/截图。
 - [x] 停止扩展旧 AppCompat 蓝绿主题；迁移完成页面只能使用 Material 3 语义角色和扩展状态 token。
 
 阶段验证：设计系统基础层使用 Kotlin 2.0.21 对应的 Compose Compiler 插件、Compose BOM 2024.09.03、Material 3 和稳定版 Adaptive 1.0.0；这是当前 AGP 8.5.2、compileSdk 34 构建链可验证的稳定组合，避免在视觉任务中混入工具链升级。Compose 与 XML Bridge 共享浅深色 Material 语义角色、稳定状态色、4dp 间距网格、形状和 150～250ms 动效 token；核心组件提供浅色、深色、1.3 倍字体和 840dp 宽屏预览。两个 flavor 的 Debug assemble、`ciCheck` 和 API 34 启动测试通过，Lint 仍为 0 error、166 warning，触达文件无告警。全应用 edge-to-edge 与其余两类参考页面仍在本任务后续批次完成，本任务不得提前标记完成。
 
 首页批次验证：真实启动页已迁移为 Compose Material 3 壳，使用 Adaptive 窗口信息和批准的 600/840dp 断点在单列、双列及限制最大宽度布局间切换；整卡为唯一入口，搜索无结果提供清除操作。DataStore 保存动态/固定配色选择，API 34 冷启动验证选择可持久化。真机分别检查 360dp 深色 1.3 倍字体和 3000×2000 浅色宽屏；普通版 UI 层级不含串口、Root 日志和 Console，工程版三项均存在，运行日志无崩溃。`ciCheck`、两个 Release assemble 和两个 flavor 的 API 34 instrumentation 测试通过，Lint 为 0 error、165 warning。全应用 edge-to-edge、标准工具页和工程密集页仍待完成。
+
+完成验证：除按规范独立处理的沉浸式全屏视频页外，XML Activity 统一继承 Material 3 `PlatformActivity` 壳层；状态栏、导航栏、显示缺口和 IME inset 由壳层消费一次，页面内容不再重复 padding。应用级动态色预条件与首页 DataStore 选择共用同一状态源。快捷工具参考页在 360dp 深色、1.3 倍字体下无裁切；首页、快捷工具和 Console 均在 API 34 真机完成浅色/深色、紧凑/3000×2000 宽屏视觉检查，Console 命令 `echo p1t05` 返回退出码 0。最终执行 `ciCheck`、两个 Release assemble 和两个 flavor 的 API 34 instrumentation 测试均通过，Lint 为 0 error、142 warning，触达文件无告警；全屏视频页保留 sticky immersive，并可通过系统手势恢复系统栏及显式退出。
 
 退出条件：两种产品形态都能构建；普通版不包含工程专属权限和入口；三类参考页面通过 UI/UX 规范验收。
 

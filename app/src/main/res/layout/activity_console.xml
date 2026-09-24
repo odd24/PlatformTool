@@ -2,36 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/surface"
     android:orientation="vertical"
-    android:padding="12dp">
+    android:padding="@dimen/pt_space_md">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/status_info_background"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.SwitchCompat
+        <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/consoleRootSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Root" />
+            android:minHeight="@dimen/pt_touch_target"
+            android:text="@string/console_root" />
 
         <TextView
             android:id="@+id/consoleStatus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/pt_space_sm"
             android:layout_weight="1"
-            android:text="正在初始化…"
-            android:textColor="@color/text_secondary"
+            android:text="@string/console_initializing"
+            android:textColor="@color/pt_on_info_container"
             android:textSize="13sp" />
     </LinearLayout>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pt_space_xs"
         android:scrollbars="none">
 
         <LinearLayout
@@ -39,16 +41,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button android:id="@+id/consoleHistoryPrevious" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="上一条" />
-            <Button android:id="@+id/consoleHistoryNext" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="下一条" />
-            <Button android:id="@+id/consoleCopyButton" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="复制" />
-            <Button android:id="@+id/consoleExportButton" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="导出" />
-            <Button android:id="@+id/consoleClearButton" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="清屏" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/consoleHistoryPrevious"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/console_history_previous" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/consoleHistoryNext"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/console_history_next" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/consoleCopyButton"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/console_copy" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/consoleExportButton"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/console_export" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/consoleClearButton"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/console_clear" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -56,49 +73,55 @@
         android:id="@+id/consoleOutputScroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="@dimen/pt_space_xs"
         android:layout_weight="1"
-        android:background="@color/log_background"
+        android:background="@drawable/engineering_output_background"
         android:fillViewport="true">
 
         <TextView
             android:id="@+id/consoleOutput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:fontFamily="monospace"
+            android:padding="@dimen/pt_space_sm"
             android:textColor="@color/log_text"
             android:textIsSelectable="true"
             android:textSize="13sp" />
     </ScrollView>
 
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_marginTop="@dimen/pt_space_xs"
+        android:hint="@string/console_command_hint">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/consoleCommandInput"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="输入命令，如 getprop ro.build.version.release"
             android:imeOptions="actionSend"
             android:inputType="text|textNoSuggestions"
             android:maxLines="1"
             android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/consoleRunButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="执行" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pt_space_xs"
+        android:gravity="end"
+        android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/consoleStopButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="停止" />
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/console_stop" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/consoleRunButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pt_space_xs"
+            android:text="@string/console_run" />
     </LinearLayout>
 </LinearLayout>

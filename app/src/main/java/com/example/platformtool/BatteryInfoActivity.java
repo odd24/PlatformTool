@@ -19,7 +19,6 @@ import android.content.pm.PackageManager;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
 
@@ -40,7 +39,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class BatteryInfoActivity extends AppCompatActivity {
+public class BatteryInfoActivity extends PlatformActivity {
     private static final long REFRESH_INTERVAL_MS = 1_000L;
     private static final String PREFS_NAME = "battery_chart";
     private static final String PREF_LAST_CSV_URI = "last_csv_uri";

@@ -23,7 +23,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -50,7 +49,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RootLogActivity extends AppCompatActivity {
+public class RootLogActivity extends PlatformActivity {
     private static final int EXPORT_REQUEST = 1001;
     private static final int MAX_STORED_LINES = 10000;
     private static final int MAX_VISIBLE_LINES = 5000;

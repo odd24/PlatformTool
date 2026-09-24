@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class VideoLibraryActivity extends AppCompatActivity {
+public class VideoLibraryActivity extends PlatformActivity {
     private final List<MediaEntry> items = MediaRepository.VIDEO;
     private final List<String> labels = new ArrayList<>();
     private final ExecutorService scanExecutor = Executors.newSingleThreadExecutor();

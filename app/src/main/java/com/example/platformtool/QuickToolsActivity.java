@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
 
@@ -29,7 +28,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class QuickToolsActivity extends AppCompatActivity {
+public class QuickToolsActivity extends PlatformActivity {
     private static final String SHOW_TOUCHES = "show_touches";
     private static final String POINTER_LOCATION = "pointer_location";
 

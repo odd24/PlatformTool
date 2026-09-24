@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class AudioPlayerActivity extends AppCompatActivity {
+public class AudioPlayerActivity extends PlatformActivity {
     private static final int LOOP_ONE = 1;
     private static final int LOOP_LIST = 2;
 

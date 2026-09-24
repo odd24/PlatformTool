@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import org.json.JSONArray;
@@ -37,7 +36,7 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ConsoleActivity extends AppCompatActivity {
+public class ConsoleActivity extends PlatformActivity {
     private static final String PREFS = "console";
     private static final String KEY_HISTORY = "history";
     private static final int MAX_HISTORY = 100;
@@ -69,7 +68,7 @@ public class ConsoleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_console);
-        setTitle("Console");
+        setTitle(R.string.tool_console_title);
         if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         outputView = findViewById(R.id.consoleOutput);
@@ -105,20 +104,19 @@ public class ConsoleActivity extends AppCompatActivity {
             if (changingRootSwitch) return;
             if (checked && suMode == SuMode.NONE) {
                 setRootChecked(false);
-                Toast.makeText(this, "当前设备未向 App 授予 Root", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.console_root_unavailable, Toast.LENGTH_LONG).show();
             } else {
                 updateStatus();
             }
         });
 
-        appendOutput("PlatformTool Console\n"
-                + "可直接输入 shell 命令；粘贴 adb shell 命令时会自动移除前缀。\n\n");
+        appendOutput(getString(R.string.console_intro));
         setCommandRunning(false);
         detectRoot();
     }
 
     private void detectRoot() {
-        statusView.setText("普通模式：App UID；正在检测 Root…");
+        statusView.setText(R.string.console_status_detecting);
         executor.execute(() -> {
             SuMode detected = probeRoot(SuMode.DASH_C) ? SuMode.DASH_C
                     : (probeRoot(SuMode.UID_ZERO) ? SuMode.UID_ZERO : SuMode.NONE);
@@ -167,16 +165,19 @@ public class ConsoleActivity extends AppCompatActivity {
         boolean stripped = raw.matches("(?is)^adb\\s+shell(?:\\s+.*)?$");
         String command = raw.replaceFirst("(?is)^adb\\s+shell(?:\\s+)?", "").trim();
         if (command.isEmpty()) {
-            Toast.makeText(this, "请输入 adb shell 后面的命令", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.console_missing_adb_command, Toast.LENGTH_SHORT).show();
             return;
         }
         addHistory(command);
         commandInput.setText("");
         historyPosition = history.size();
         SuMode mode = rootSwitch.isChecked() ? suMode : SuMode.NONE;
-        appendOutput("[" + displayTimestamp() + "] "
-                + (mode == SuMode.NONE ? "$ " : "# ") + command + "\n");
-        if (stripped) appendOutput("(已自动移除 adb shell 前缀)\n");
+        appendOutput(getString(
+                R.string.console_prompt_format,
+                displayTimestamp(),
+                mode == SuMode.NONE ? "$" : "#",
+                command));
+        if (stripped) appendOutput(getString(R.string.console_prefix_removed));
         setCommandRunning(true);
         executor.execute(() -> executeCommand(mode, command));
     }
@@ -203,7 +204,7 @@ public class ConsoleActivity extends AppCompatActivity {
             exitCode = process.waitFor();
         } catch (InterruptedException exception) {
             Thread.currentThread().interrupt();
-            failure = "任务已中断";
+            failure = getString(R.string.console_interrupted);
         } catch (IOException | RuntimeException exception) {
             failure = exception.getMessage() == null ? exception.toString() : exception.getMessage();
         } finally {
@@ -214,12 +215,10 @@ public class ConsoleActivity extends AppCompatActivity {
         }
         long elapsed = SystemClock.elapsedRealtime() - started;
         String footer = stopRequested
-                ? String.format(Locale.getDefault(), "\n[命令已停止，耗时 %.3f 秒]\n\n",
-                elapsed / 1000d)
+                ? getString(R.string.console_stopped_format, elapsed / 1000d)
                 : failure == null
-                ? String.format(Locale.getDefault(), "\n[退出码 %d，耗时 %.3f 秒]\n\n",
-                exitCode, elapsed / 1000d)
-                : "\n[执行失败：" + failure + "]\n\n";
+                ? getString(R.string.console_finished_format, exitCode, elapsed / 1000d)
+                : getString(R.string.console_failed_format, failure);
         appendOutput(footer);
         runOnUiThread(() -> setCommandRunning(false));
     }
@@ -246,7 +245,7 @@ public class ConsoleActivity extends AppCompatActivity {
         }
         if (process == null) return;
         stopRequested = true;
-        appendOutput("\n[正在停止命令…]\n");
+        appendOutput(getString(R.string.console_stopping));
         process.destroy();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && process.isAlive()) {
             process.destroyForcibly();
@@ -264,13 +263,17 @@ public class ConsoleActivity extends AppCompatActivity {
 
     private void updateStatus() {
         if (commandRunning) {
-            statusView.setText(rootSwitch.isChecked() ? "Root 命令运行中" : "普通命令运行中");
+            statusView.setText(rootSwitch.isChecked()
+                    ? R.string.console_status_running_root
+                    : R.string.console_status_running_app);
         } else if (rootSwitch.isChecked()) {
-            statusView.setText("Root 模式：uid=0（" + suMode.label + "）");
+            statusView.setText(getString(
+                    R.string.console_status_root_format,
+                    getString(suMode.labelRes)));
         } else if (suMode == SuMode.NONE) {
-            statusView.setText("普通模式：App UID；未获得 Root 权限");
+            statusView.setText(R.string.console_status_no_root);
         } else {
-            statusView.setText("普通模式：App UID；Root 可用");
+            statusView.setText(R.string.console_status_root_available);
         }
     }
 
@@ -282,7 +285,7 @@ public class ConsoleActivity extends AppCompatActivity {
             if (length > MAX_OUTPUT_CHARS) {
                 CharSequence kept = outputView.getText().subSequence(
                         length - KEEP_OUTPUT_CHARS, length);
-                outputView.setText("[较早输出已截断]\n" + kept);
+                outputView.setText(getString(R.string.console_output_truncated_format, kept));
             }
             outputScroll.post(() -> outputScroll.fullScroll(ScrollView.FOCUS_DOWN));
         });
@@ -322,8 +325,9 @@ public class ConsoleActivity extends AppCompatActivity {
 
     private void copyOutput() {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        clipboard.setPrimaryClip(ClipData.newPlainText("Console 输出", outputView.getText()));
-        Toast.makeText(this, "Console 输出已复制", Toast.LENGTH_SHORT).show();
+        clipboard.setPrimaryClip(ClipData.newPlainText(
+                getString(R.string.console_clipboard_label), outputView.getText()));
+        Toast.makeText(this, R.string.console_copied, Toast.LENGTH_SHORT).show();
     }
 
     private void exportOutput(Uri uri) {
@@ -331,13 +335,15 @@ public class ConsoleActivity extends AppCompatActivity {
         String snapshot = outputView.getText().toString();
         executor.execute(() -> {
             try (OutputStream output = getContentResolver().openOutputStream(uri, "w")) {
-                if (output == null) throw new IOException("无法打开目标文件");
+                if (output == null) throw new IOException(
+                        getString(R.string.console_open_target_failed));
                 output.write(snapshot.getBytes(StandardCharsets.UTF_8));
                 runOnUiThread(() -> Toast.makeText(this,
-                        "Console 输出已导出", Toast.LENGTH_LONG).show());
+                        R.string.console_exported, Toast.LENGTH_LONG).show());
             } catch (Exception exception) {
                 runOnUiThread(() -> Toast.makeText(this,
-                        "导出失败：" + exception.getMessage(), Toast.LENGTH_LONG).show());
+                        getString(R.string.console_export_failed_format, exception.getMessage()),
+                        Toast.LENGTH_LONG).show());
             }
         });
     }
@@ -371,8 +377,10 @@ public class ConsoleActivity extends AppCompatActivity {
     @Override public boolean onSupportNavigateUp() { finish(); return true; }
 
     private enum SuMode {
-        NONE("App Shell"), DASH_C("su -c"), UID_ZERO("su 0");
-        final String label;
-        SuMode(String label) { this.label = label; }
+        NONE(R.string.console_shell_label),
+        DASH_C(R.string.console_root_dash_label),
+        UID_ZERO(R.string.console_root_uid_label);
+        final int labelRes;
+        SuMode(int labelRes) { this.labelRes = labelRes; }
     }
 }

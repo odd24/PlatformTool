@@ -13,11 +13,10 @@ import android.view.Surface;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class SensorActivity extends AppCompatActivity implements SensorEventListener {
+public class SensorActivity extends PlatformActivity implements SensorEventListener {
     private static final int UI_UPDATE_INTERVAL_MS = 100;
     private static final int[] SENSOR_TYPES = {
             Sensor.TYPE_ACCELEROMETER,

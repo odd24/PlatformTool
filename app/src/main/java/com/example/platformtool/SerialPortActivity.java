@@ -13,7 +13,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 
@@ -39,7 +38,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class SerialPortActivity extends AppCompatActivity {
+public class SerialPortActivity extends PlatformActivity {
     private static final int MAX_LOG_CHARS = 100_000;
     private static final String[] BAUD_RATES = {
             "50", "75", "110", "134", "150", "200", "300", "600", "1200", "1800",

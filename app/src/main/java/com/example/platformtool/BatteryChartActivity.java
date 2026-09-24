@@ -4,7 +4,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +19,7 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class BatteryChartActivity extends AppCompatActivity {
+public class BatteryChartActivity extends PlatformActivity {
     public static final String EXTRA_CSV_URI = "battery_csv_uri";
 
     private final ExecutorService ioExecutor = Executors.newSingleThreadExecutor();
