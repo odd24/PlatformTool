@@ -181,18 +181,18 @@ ToolDescriptor
 
 #### P0-T01 保护当前工作区
 
-- [ ] 记录 `git status --short`。
-- [ ] 确认 `app/build.gradle.kts`、`SensorActivity.java`、`activity_sensor.xml` 的现有修改归属。
-- [ ] 在进行重构前由维护者提交、暂存或明确保留这些改动。
-- [ ] 不得使用 `git reset --hard`、`git checkout --` 或清理未跟踪文件覆盖用户修改。
+- [x] 记录 `git status --short`。
+- [x] 确认 `app/build.gradle.kts`、`SensorActivity.java`、`activity_sensor.xml` 的现有修改归属。
+- [x] 在进行重构前由维护者提交、暂存或明确保留这些改动。
+- [x] 不得使用 `git reset --hard`、`git checkout --` 或清理未跟踪文件覆盖用户修改。
 
 验收：现有修改有明确归属和回退点。
 
 #### P0-T02 建立 Git 忽略规则
 
-- [ ] 新增根目录 `.gitignore`，覆盖 `.gradle/`、`**/build/`、本地 IDE 和签名机密。
-- [ ] 仅从 Git 索引移除已跟踪构建产物，不删除用户本地文件。
-- [ ] 验证源码、Wrapper 和必要配置仍受版本控制。
+- [x] 新增根目录 `.gitignore`，覆盖 `.gradle/`、`**/build/`、本地 IDE 和签名机密。
+- [x] 仅从 Git 索引移除已跟踪构建产物，不删除用户本地文件。
+- [x] 验证源码、Wrapper 和必要配置仍受版本控制。
 
 验收：执行一次构建后，`git status` 不因构建缓存产生大量改动。
 

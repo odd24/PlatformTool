@@ -1,0 +1,27 @@
+# Gradle caches and generated build outputs
+.gradle/
+**/build/
+
+# Android Studio and local machine configuration
+.idea/
+*.iml
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing material and local signing configuration
+*.jks
+*.keystore
+*.p12
+keystore.properties
+signing.properties
+
+# Packaged artifacts and diagnostics
+*.apk
+*.aab
+*.log
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
