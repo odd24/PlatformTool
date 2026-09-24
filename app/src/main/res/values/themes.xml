@@ -60,6 +60,11 @@
         <item name="ptMotionEmphasized">@integer/pt_motion_emphasized</item>
     </style>
 
+    <style name="Theme.PlatformTool.Compose" parent="Theme.PlatformTool">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="ShapeAppearance.PlatformTool.Small" parent="ShapeAppearance.Material3.Corner.Small">
         <item name="cornerSize">@dimen/pt_shape_small</item>
     </style>
